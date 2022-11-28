@@ -6,6 +6,8 @@ import Card from './Cards'
 import ProductList from'./ProductsList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Offers from './Offers';
+import Trendy from './Components/Trendy';
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +16,7 @@ function App() {
       <Card/>
       <ProductList/>
       <Offers/>
+      <Trendy/>
      </div>
   );
 }
