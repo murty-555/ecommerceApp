@@ -1,0 +1,23 @@
+title  
+{  
+        margin-bottom: 20px;  
+        padding:20px  
+}  
+.img  
+{  
+        height: 180px;width:80%;
+}
+.owl-container{
+        
+        border-style: solid;
+        border-radius: 1px;
+        border-color: whitesmoke;
+        padding: 25px;
+        margin: 10px;
+}
+.owl-carousel .owl-item {
+        min-height: 1px;
+        float: left;
+        overflow: hidden;
+        -webkit-touch-callout: none;
+    }

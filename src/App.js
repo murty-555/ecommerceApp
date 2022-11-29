@@ -7,6 +7,8 @@ import ProductList from'./ProductsList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Offers from './Offers';
 import Trendy from './Components/Trendy';
+import OwlDemo from "./Components/OwlDemo";
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <ProductList/>
       <Offers/>
       <Trendy/>
+      <OwlDemo/>
      </div>
   );
 }
