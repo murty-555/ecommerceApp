@@ -192,9 +192,9 @@ function Footer() {
           </div>
         </div>
       </div>
-      <button className="btn btn-primary back-to-top">
+      <a href="#" className="btn btn-primary back-to-top">
         <i className="fa fa-angle-double-up"></i>
-      </button>
+      </a>
     </div>
   );
 }
