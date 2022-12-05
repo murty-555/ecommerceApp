@@ -1,5 +1,6 @@
 import React from "react";
 import "./Carosal.css";
+import Login from "./Login";
 const Carosal = () => {
   return (
     <div className="container-fluid mb-5">
@@ -120,9 +121,7 @@ const Carosal = () => {
                 </a>
               </div>
               <div className="navbar-nav ml-auto py-0">
-                <a href="/" className="nav-item nav-link">
-                  Login
-                </a>
+                <Login nameOfClass={"nav-item nav-link"} />
                 <a href="/" className="nav-item nav-link">
                   Register
                 </a>
