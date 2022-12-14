@@ -19,7 +19,7 @@ const Header = () => {
             </a>
           </div>
         </div>
-        <div className="col-lg-6 text-center text-lg-right">
+        <div className="col-lg-6 text-lg-right">
           <div className="d-inline-flex align-items-center">
             <a className="text-dark px-2" href="/">
               <i className="fab fa-facebook-f"></i>
@@ -67,13 +67,13 @@ const Header = () => {
           </form>
         </div>
         <div className="col-lg-3 col-6 text-right">
-          <a href="/" className="btn border">
+          <a href="/" className="btn border m-2">
             <i className="fas fa-heart text-primary"></i>
-            <span className="badge">0</span>
+            <span className="badge text-dark">0</span>
           </a>
           <a href="/" className="btn border">
             <i className="fas fa-shopping-cart text-primary"></i>
-            <span className="badge">0</span>
+            <span className="badge text-dark">0</span>
           </a>
         </div>
       </div>

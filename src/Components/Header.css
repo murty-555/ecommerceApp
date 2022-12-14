@@ -4,3 +4,14 @@
 .d-block {
     display: block !important;
 }
+.text-dark{
+    text-decoration: none;
+}
+.text-lg-right{
+    text-align: center;
+}
+@media (min-width: 992px){
+    .text-lg-right{
+        text-align: right;
+    }
+}
