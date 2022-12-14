@@ -1,4 +1,4 @@
-title  
+/* title  
 {  
         margin-bottom: 20px;  
         padding:20px  
@@ -20,4 +20,16 @@ title
         float: left;
         overflow: hidden;
         -webkit-touch-callout: none;
-    }
+    } */
+    title  
+{  
+        margin-bottom: 10px;  
+        padding:10px  
+}  
+
+.image-container{
+        height: 220px;
+        padding: 30px;
+        border: 0.5px solid #EDF1FF;
+        margin: 15px;
+}
