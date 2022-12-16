@@ -1,0 +1,66 @@
+.shoppingCart .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf1ff;
+    min-height: 300px;
+    height: 40vh;
+}
+
+.shoppingCart .head a{
+    color: #d39c97;
+    text-decoration: none;
+}
+.shoppingCart .head a:hover{
+    color: #ba6a90;
+    text-decoration: underline;
+}
+
+.shoppingCart .table-head{
+    background-color: #edf1ff !important;
+}
+.shoppingCart .table-head th{
+    border: none;
+}
+
+.shoppingCart button{
+    background-color: #d19c97;
+    border-radius: 0px !important;
+}
+.shoppingCart button:hover{
+    background-color: #c5837c;
+    color: #ffffff;
+}
+.shoppingCart .card-header{
+    background-color: #edf1ff;
+}
+.shoppingCart .card-footer{
+    background-color: #ffffff;
+}
+.sign-buttons{
+    font-size: 24px;
+    /* background-color: #c5837c; */
+    border: none;
+    padding: 2px;
+}
+.shoppingCart .card-footer h5{
+    font-weight: 700;
+}
+.shoppingCart .card-header h5{
+    font-weight: 700;
+}
+.shoppingCart .quantity{
+    background-color: #edf1ff;
+}
+.shoppingCart .table button, .quantity{
+    width: 40px;
+    margin: 0;
+    border: none;
+}
+.shoppingCart img{
+    width: 50px;
+}
+.shoppingCart .checkout-button{
+    height: 3.5em;
+}
