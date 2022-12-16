@@ -1,4 +1,6 @@
 import React from "react";
+import "./Register.css";
+import imageForRegister from "./Images/register-page-image-svg.svg";
 
 function Register({ nameOfClass }) {
   return (
@@ -13,58 +15,107 @@ function Register({ nameOfClass }) {
       </span>
 
       <div
-        class="modal fade"
+        className="modal fade register-popup-page"
         id="exampleModalCenterForRegister"
         tabindex="-1"
         role="dialog"
         aria-labelledby="exampleModalCenterForRegisterTitle"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterForRegisterTitle">
+        <div
+          className="modal-dialog modal-lg modal-dialog-centered"
+          role="document"
+        >
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5
+                className="modal-title"
+                id="exampleModalCenterForRegisterLongTitle"
+              >
                 Register
               </h5>
               <button
                 type="button"
-                class="close"
+                className="close"
                 data-dismiss="modal"
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              <form className="d-flex flex-column text-center">
-                <div className="d-flex flex-column">
-                  <label className="text-left">Name</label>
-                  <input type="text" />
+            <div className="modal-body">
+              <div className="row">
+                <div className="col register-page-form-container">
+                  <div className="register-page-icon-container text-center mb-2">
+                    <i className="fas fa-users register-page-icon mb-2"></i>
+                    <p>Please enter your details to register</p>
+                  </div>
+                  <form className="register-page-form">
+                    <div className="inputs">
+                      <input type="text" name="" id="name" className="input" />
+                      <label htmlFor="name" className="input-label">
+                        name
+                      </label>
+                    </div>
+                    <div className="inputs">
+                      <input
+                        type="email"
+                        name=""
+                        id="email"
+                        className="input"
+                      />
+                      <label htmlFor="email" className="input-label">
+                        email
+                      </label>
+                    </div>
+                    <div className="inputs">
+                      <input
+                        type="text"
+                        name=""
+                        id="username"
+                        className="input"
+                      />
+                      <label htmlFor="username" className="input-label">
+                        username
+                      </label>
+                    </div>
+                    <div className="inputs">
+                      <input
+                        type="password"
+                        name=""
+                        id="password"
+                        className="input"
+                      />
+                      <label htmlFor="password" className="input-label">
+                        password
+                      </label>
+                    </div>
+                    <div className="text-center register-button-container">
+                      <button
+                        type="button"
+                        className="btn btn-primary register-button"
+                      >
+                        Register
+                      </button>
+                    </div>
+                  </form>
                 </div>
-                <div className="d-flex flex-column">
-                  <label className="text-left">Email</label>
-                  <input type="email" />
+                <div className="col d-lg-block d-none register-page-image-container">
+                  <img
+                    src={imageForRegister}
+                    className="register-page-image"
+                    alt="img"
+                  />
                 </div>
-                <div className="d-flex flex-column">
-                  <label className="text-left">Username</label>
-                  <input type="text" />
-                </div>
-                <div className="d-flex flex-column">
-                  <label className="text-left">Password</label>
-                  <input type="password" />
-                </div>
-              </form>
+              </div>
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer text-center">
               <button
                 type="button"
                 class="btn btn-secondary"
                 data-dismiss="modal"
               >
                 Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Register
               </button>
             </div>
           </div>
