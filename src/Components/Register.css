@@ -1,0 +1,110 @@
+.register-popup-page .modal-content{
+    padding-right: 0px !important;
+}
+.register-page-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.register-page-image-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.register-page-icon{
+    font-size: 48px;
+    color: #d19c97;
+}
+.register-page-form{
+    display: flex;
+    flex-direction: column;
+
+}
+.register-popup-page .register-button{
+    background-color: #d19c97;
+}
+.register-button-container{
+    text-align: center !important;
+}
+.register-page-form-container .forgot-password{
+    text-align: center;
+    margin-top: 16px;
+}
+
+input[type="text"],input[type="password"],input[type="email"] {
+    display: block;
+    border: 1px solid rgb(228, 228, 228);
+    font-size: 16px;
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    position: relative;
+  }
+  .inputs {
+    position: relative;
+  }
+  .input-label {
+    position: absolute;
+    top: 10px;
+    font-size: 1.1rem;
+    left: 14px;
+    color: rgb(122, 122, 122);
+    font-weight: 100;
+    transition: 0.1s ease;
+    background-color: white;
+    padding: 0 5px;
+  }
+  
+  input[type="text"]:focus ~ .input-label {
+    top: -12px;
+    color: #d19c97;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+  input[type="text"]:target ~ .input-label {
+    top: -7px;
+    color: #d19c97;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+  input[type="password"]:focus ~ .input-label {
+    top: -12px;
+    color: #d19c97;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+  input[type="password"]:target ~ .input-label {
+    top: -7px;
+    color: #d19c97;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+  input[type="email"]:focus ~ .input-label {
+    top: -12px;
+    color: #d19c97;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+  input[type="email"]:target ~ .input-label {
+    top: -7px;
+    color: #d19c97;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+  .input:focus {
+    border: 2px solid #d19c97;
+  }
