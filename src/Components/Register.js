@@ -52,10 +52,10 @@ function Register({ nameOfClass }) {
                   </div>
                   <form className="register-page-form">
                     <div className="inputs">
-                      <input type="text" name="" id="name" className="input" />
-                      <label htmlFor="name" className="input-label">
+                      <input type="text" name="" id="name" className="input" placeholder="name"/>
+                      {/* <label htmlFor="name" className="input-label">
                         name
-                      </label>
+                      </label> */}
                     </div>
                     <div className="inputs">
                       <input
@@ -63,10 +63,11 @@ function Register({ nameOfClass }) {
                         name=""
                         id="email"
                         className="input"
+                        placeholder="email"
                       />
-                      <label htmlFor="email" className="input-label">
+                      {/* <label htmlFor="email" className="input-label">
                         email
-                      </label>
+                      </label> */}
                     </div>
                     <div className="inputs">
                       <input
@@ -74,10 +75,11 @@ function Register({ nameOfClass }) {
                         name=""
                         id="username"
                         className="input"
+                        placeholder="username"
                       />
-                      <label htmlFor="username" className="input-label">
+                      {/* <label htmlFor="username" className="input-label">
                         username
-                      </label>
+                      </label> */}
                     </div>
                     <div className="inputs">
                       <input
@@ -85,10 +87,11 @@ function Register({ nameOfClass }) {
                         name=""
                         id="password"
                         className="input"
+                        placeholder="password"
                       />
-                      <label htmlFor="password" className="input-label">
+                      {/* <label htmlFor="password" className="input-label">
                         password
-                      </label>
+                      </label> */}
                     </div>
                     <div className="text-center register-button-container">
                       <button
