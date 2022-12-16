@@ -51,22 +51,14 @@ function Login({ nameOfClass }) {
                     <p>Please enter your details to login</p>
                   </div>
                   <form className="login-page-form">
-                    {/* <div className="d-flex flex-column mb-2">
-                      <label>username</label>
-                      <input type="text" />
-                    </div> */}
                     <div className="inputs">
-                      <input type="text" name="" id="username" className="input"/>
-                      <label htmlFor="username" className="input-label">username</label>
+                      {/* <label htmlFor="username" className="input-label">username</label> */}
+                      <input type="text" name="" id="username" className="input" placeholder="username"/>
                     </div>
                     <div className="inputs">
-                      <input type="password" name="" id="password" className="input"/>
-                      <label htmlFor="password" className="input-label">password</label>
+                      {/* <label htmlFor="password" className="input-label">password</label> */}
+                      <input type="password" name="" id="password" className="input" placeholder="password"/>
                     </div>
-                    {/* <div className="d-flex flex-column mb-2">
-                      <label>password</label>
-                      <input type="password" />
-                    </div> */}
                     <div className="text-center login-button-container">
                     <button
                       type="button"
