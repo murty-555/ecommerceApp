@@ -8,7 +8,6 @@ import Offers from "./Offers";
 import Trendy from "./Components/Trendy";
 import OwlDemo from "./Components/OwlDemo";
 import Footer from "./Components/Footer";
-import Checkout from "./pages/shopping-cart-page/cartData/Checkoutpage/Checkout";
 
 function App() {
   return (
