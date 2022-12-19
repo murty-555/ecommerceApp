@@ -1,0 +1,19 @@
+.contact-us-page .bg-secondary {
+    background-color: #EDF1FF !important;
+}
+.contact-us-page .bg-secondary {
+    background-color: #EDF1FF !important;
+}
+.contact-us-page .text-primary {
+    color: #D19C97 !important;
+}    
+.contact-us-page a {
+    color: #D19C97;
+    text-decoration: none;
+    background-color: transparent;
+}
+.contact-us-page .btn-primary {
+    color: #212529;
+    background-color: #D19C97;
+    border-color: #D19C97;
+}

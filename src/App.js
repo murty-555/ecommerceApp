@@ -9,6 +9,7 @@ import Trendy from "./Components/Trendy";
 import OwlDemo from "./Components/OwlDemo";
 import Footer from "./Components/Footer";
 
+
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
       <Trendy />
       <OwlDemo />
       <Footer />
+      
     </div>
   );
 }
