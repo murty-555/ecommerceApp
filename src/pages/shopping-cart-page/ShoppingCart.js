@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ShoppingCart.css";
 import cartData from "./cartData/index";
 import InputGroup from "./InputGroup";
 
 const ShoppingCart = () => {
+  const [items, setItems] = useState(cartData);
+
+  const updateQty = (id, newQty) => {
+    const newItems = items.map((item) => {
+      if (item.id === id) {
+        return { ...item, qty: newQty };
+      }
+      return item;
+    });
+    setItems(newItems);
+  };
+
+  const grandTotal = items
+    .reduce((total, item) => total + item.qty * item.price, 0);
   return (
     <div className="shoppingCart">
       <div className="container-fluid head">
@@ -25,17 +39,17 @@ const ShoppingCart = () => {
               </tr>
             </thead>
             <tbody>
-              {cartData.map(data => (
-                <tr key={data.src}>
+              {items.map(item => (
+                <tr key={item.src}>
                 <td>
-                  <img src={data.src} alt="img" />
-                  {data.name}
+                  <img src={item.src} alt="img" />
+                  {item.name}
                 </td>
-                <td className="align-middle">${data.price}</td>
+                <td className="align-middle">${item.price}</td>
                 <td className="align-middle">
-                  <InputGroup qty={data.qty}/>
+                  <InputGroup updateQty={updateQty} {...item}/>
                 </td>
-                <td className="align-middle">${data.price * data.qty}</td>
+                <td className="align-middle">${item.price * item.qty}</td>
                 <td className="align-middle">
                   <button>
                     <i className="fas fa-times"></i>
@@ -54,7 +68,7 @@ const ShoppingCart = () => {
             <div className="card-body">
               <div className="d-flex justify-content-between mt-3">
                 <h6>Subtotal</h6>
-                <h6>$150</h6>
+                <h6>${grandTotal}</h6>
               </div>
               <div className="d-flex justify-content-between mt-3">
                 <h6>Shipping</h6>
@@ -64,7 +78,7 @@ const ShoppingCart = () => {
             <div className="card-footer">
               <div className="d-flex justify-content-between mb-3">
                 <h5>Total</h5>
-                <h5>$160</h5>
+                <h5>${grandTotal + 10}</h5>
               </div>
               <button className="btn btn-block checkout-button">Proceed To Checkout</button>
             </div>
