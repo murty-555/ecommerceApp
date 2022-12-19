@@ -1,0 +1,13 @@
+.check{
+    min-height:300px;
+}
+.text-primary {
+    color: #D19C97 !important;
+}
+.btn-primary{
+    background-color: #D19C97 !important;
+    border-color: whitesmoke !important;
+}
+.btn-primary:hover{
+    border-color: whitesmoke !important;
+}
