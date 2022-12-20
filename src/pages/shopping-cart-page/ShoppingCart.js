@@ -27,7 +27,7 @@ const ShoppingCart = () => {
         </p>
       </div>
       <div className="row container-fluid body mx-0 px-xl-5 pt-5">
-        <div className="col-12 col-lg-8 text-center mb-5">
+        <div className="col-12 col-lg-8 table-container text-center mb-5">
           <table className="table table-bordered mb-0">
             <thead className="table-head text-dark">
               <tr>

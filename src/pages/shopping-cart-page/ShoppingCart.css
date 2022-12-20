@@ -17,6 +17,10 @@
     text-decoration: underline;
 }
 
+.shoppingCart .table-container{
+    overflow-x: auto;
+}
+
 .shoppingCart .table-head{
     background-color: #edf1ff !important;
 }
