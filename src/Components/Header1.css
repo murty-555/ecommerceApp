@@ -1,26 +1,26 @@
-.navbar-vertical.navbar-light .navbar-nav .nav-link {
+.header1-container .navbar-vertical.navbar-light .navbar-nav .nav-link {
     padding: 8px 30px;
     border-bottom: 1px solid #EDF1FF;
 }
-.bg-clrr {
+.header1-container .bg-clrr {
     background-color: #ffffff !important;
 }
 
-.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+.header1-container .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
     
     color: #D19C97;
 }
-a {
+.header1-container a {
     color: #D19C97;
     text-decoration: none;
     background-color: transparent;
 }
-a{
+.header1-container a{
     color: black !important;
 }
-a:hover{
+.header1-container a:hover{
     color: #D19C97 !important;
 }
-.bg-clr:visited{
+.header1-container .bg-clr:visited{
     background-color: #D19C97 !important;
 }

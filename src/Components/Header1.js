@@ -5,14 +5,15 @@ import Register from "./Register";
 const Header1=()=>{
     
     return(
-        <div class="container-fluid">
+        <div class="container-fluid header1-container">
         <div class="row border-top px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a class="btn shadow-none d-flex align-items-center justify-content-between  text-white w-100 collapsed" data-toggle="collapse" href="#navbar-vertical" style={{height: "65px", "margin-top": "-1px", padding: "0 30px",backgroundColor:"#D19C97", "aria-expanded":"false"}}>
+            <div class="col-lg-3 d-none d-lg-block ">
+                
+                <a class="btn shadow-none d-flex align-items-center justify-content-between  text-white w-100 collapsed border-0 mr-2" data-toggle="collapse" href="#navbar-vertical" style={{height: "65px", "margin-top": "-1px", padding: "0 30px",backgroundColor:"#D19C97", "aria-expanded":"false"}}>
                     <h6 class="m-0">Categories</h6>
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
-                <nav class="position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-clrr collapse" id="navbar-vertical" style={{width: "calc(100% - 30px)", "z-index": "1"}}>
+                <nav class="position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-clrr collapse " id="navbar-vertical" style={{width: "calc(100% - 30px)", "z-index": "1"}}>
                     <div class="navbar-nav w-100 overflow-hidden" style={{height: "410px"}}>
                         <div class="nav-item dropdown clr">
                             <a href="#" class="nav-link" data-toggle="dropdown" >Dresses <i class="fa fa-angle-down float-right mt-1"></i></a>

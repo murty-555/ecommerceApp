@@ -3,12 +3,12 @@ import "./Carosal.css";
 const Carosal=()=>{
     
     return(
-        <div class="container-fluid car-container mb-5">
+        <div class="container-fluid car-container mb-5 ml-3">
         <div className="row">
             <div className="col-3 d-none d-lg-block"></div>
                 <div id="header-carousel" class=" col-12 col-lg-9 carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active" style={{height: "500px"}}>
+                        <div class="carousel-item active" style={{height: "450px"}}>
                             <img class="img-fluid" src="https://technext.github.io/eshopper/img/carousel-1.jpg" alt="Image"/>
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style={{"max-width": "700px"}}>
@@ -18,7 +18,7 @@ const Carosal=()=>{
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item" style={{height: "500px",padding:"20px"}}>
+                        <div class="carousel-item" style={{height: "450px",padding:"20px"}}>
                             <img class="img-fluid" src="https://technext.github.io/eshopper/img/carousel-2.jpg" alt="Image"/>
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style={{"max-width": "700px"}}>
