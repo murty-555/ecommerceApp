@@ -1,0 +1,26 @@
+.navbar-vertical.navbar-light .navbar-nav .nav-link {
+    padding: 8px 30px;
+    border-bottom: 1px solid #EDF1FF;
+}
+.bg-clrr {
+    background-color: #ffffff !important;
+}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    
+    color: #D19C97;
+}
+a {
+    color: #D19C97;
+    text-decoration: none;
+    background-color: transparent;
+}
+a{
+    color: black !important;
+}
+a:hover{
+    color: #D19C97 !important;
+}
+.bg-clr:visited{
+    background-color: #D19C97 !important;
+}
