@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ShoppingCart.css";
 import cartData from "./cartData/index";
-import InputGroup from "./InputGroup";
+import InputGroup from "./inputGroup/InputGroup";
 
 const ShoppingCart = () => {
   const [items, setItems] = useState(cartData);

@@ -18,7 +18,7 @@ const Carosal=()=>{
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item" style={{height: "500px",padding:"20px"}}>
+                        <div class="carousel-item" style={{height: "500px"}}>
                             <img class="img-fluid" src="https://technext.github.io/eshopper/img/carousel-2.jpg" alt="Image"/>
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style={{"max-width": "700px"}}>

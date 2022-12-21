@@ -1,31 +1,28 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
-import Carosal from "./Components/Carosal";
-import Card from "./Cards";
-import ProductList from "./ProductsList";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Offers from "./Offers";
-import Trendy from "./Components/Trendy";
-import OwlDemo from "./Components/OwlDemo";
 import Footer from "./Components/Footer";
-
-
-
+import Home from "./pages/HomePage/Home";
+import Shop from './pages/Shop/Shop';
+import ShoppingCart from './pages/shopping-cart-page/ShoppingCart';
+import Checkout from './pages/Checkoutpage/Checkout';
+import Contactus from './pages/contact-page/Contactus';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
-      <Carosal />
-      <Card />
-      <ProductList />
-      <Offers />
-      <Trendy />
-      <OwlDemo />
+      <Routes>
+        <Route exact path="/" element={<Home/>}></Route>
+        <Route exact path="/shop" element={<Shop/>}></Route>
+        {/* <Route exact path="/" element={<ShopDetail/>}></Route> */}
+        <Route exact path="/shoppingCart" element={<ShoppingCart/>}></Route>
+        <Route exact path="/checkout" element={<Checkout/>}></Route>
+        <Route exact path="/contact" element={<Contactus/>}></Route>
+      </Routes>
       <Footer />
-      
-      
-    </div>
+    </Router>
   );
 }
 
