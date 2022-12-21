@@ -5,63 +5,63 @@ const Header=()=>{
     
     return(
         <>
-        <div class="container-fluid header-container" >
-        <div class="row  py-2 px-xl-5" style={{backgroundColor:"#e6e6fa"}}>
-            <div class="col-lg-6 d-none d-lg-block" >
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-dark " href="">FAQs</a>
-                    <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Help</a>
-                    <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Support</a>
+        <div className="container-fluid header-container" >
+        <div className="row  py-2 px-xl-5" style={{backgroundColor:"#e6e6fa"}}>
+            <div className="col-lg-6 d-none d-lg-block" >
+                <div className="d-inline-flex align-items-center">
+                    <a className="text-dark " href="/">FAQs</a>
+                    <span className="text-muted px-2">|</span>
+                    <a className="text-dark" href="/">Help</a>
+                    <span className="text-muted px-2">|</span>
+                    <a className="text-dark" href="/">Support</a>
                 </div>
             </div>
-            <div class="col-lg-6  text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
+            <div className="col-lg-6  text-lg-right">
+                <div className="d-inline-flex align-items-center">
+                    <a className="text-dark px-2" href="/">
+                        <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-twitter"></i>
+                    <a className="text-dark px-2" href="/">
+                        <i className="fab fa-twitter"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a className="text-dark px-2" href="/">
+                        <i className="fab fa-linkedin-in"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-instagram"></i>
+                    <a className="text-dark px-2" href="/">
+                        <i className="fab fa-instagram"></i>
                     </a>
-                    <a class="text-dark pl-2" href="">
-                        <i class="fab fa-youtube"></i>
+                    <a className="text-dark pl-2" href="/">
+                        <i className="fab fa-youtube"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center py-3 px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none text-dark">
-                    <h1 class="m-0 display-5 font-weight-semi-bold "><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+        <div className="row align-items-center py-3 px-xl-5">
+            <div className="col-lg-3 d-none d-lg-block">
+                <a href="/" className="text-decoration-none text-dark">
+                    <h1 className="m-0 display-5 font-weight-semi-bold "><span className="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
                 </a>
             </div>
-            <div class="col-lg-6 col-6 text-left">
+            <div className="col-lg-6 col-6 text-left">
                 <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products"/>
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
+                    <div className="input-group">
+                        <input type="text" className="form-control" placeholder="Search for products"/>
+                        <div className="input-group-append">
+                            <span className="input-group-text bg-transparent text-primary">
+                                <i className="fa fa-search"></i>
                             </span>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="col-lg-3 col-6 text-right">
-                <a href="" class="btn border m-2">
-                    <i class="fas fa-heart text-primary"></i>
-                    <span class="badge text-dark">0</span>
+            <div className="col-lg-3 col-6 text-right">
+                <a href="/" className="btn border m-2">
+                    <i className="fas fa-heart text-primary"></i>
+                    <span className="badge text-dark">0</span>
                 </a>
-                <a href="" class="btn border">
-                    <i class="fas fa-shopping-cart text-primary"></i>
-                    <span class="badge text-dark">0</span>
+                <a href="/" className="btn border">
+                    <i className="fas fa-shopping-cart text-primary"></i>
+                    <span className="badge text-dark">0</span>
                 </a>
             </div>
         </div>

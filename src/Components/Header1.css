@@ -18,9 +18,12 @@
 .header1-container a{
     color: black !important;
 }
-.header1-container a:hover{
+.header1-container .nav-link:hover{
     color: #D19C97 !important;
 }
 .header1-container .bg-clr:visited{
     background-color: #D19C97 !important;
+}
+.header1-container .categerious:hover {
+    color:black;
 }
