@@ -2,7 +2,7 @@
     color: #D19C97 !important;
 }
 .header-container .d-block {
-    display: block !important;
+  display: block !important;
 }
 .header-container .bg-container{
     display: flex;
@@ -37,13 +37,20 @@
     padding-right: 15px;
     padding-left: 15px;
 }
+.header-container .text-dark{
+    text-decoration: none;
+}
+.header-container .text-lg-right{
+    text-align: center;
+
+}
 @media (min-width: 992px){
 .header-container .icon-container {
     text-align: right !important;
 }
 }
-@media (min-width: 992px){
+ @media (min-width: 992px){
     .header-container .text-lg-right {
     text-align: right !important;
 }
-}
+} 
