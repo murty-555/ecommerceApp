@@ -1,19 +1,15 @@
 import React from 'react'
-import './Checkout.Module.css'
+import './Checkout.css'
 
 export default function Checkout() {
   return (
     <div>
-    <div class="container-fluid bg-secondary mb-5">
-        <div class="d-flex flex-column align-items-center justify-content-center" style={{"min-height": "300px"}}>
-            <h1 class="font-weight-semi-bold text-uppercase mb-3">Checkout</h1>
-            <div class="d-inline-flex">
-                <p class="m-0"><a href="/">Home</a></p>
-                <p class="m-0 px-2">-</p>
-                <p class="m-0">Checkout</p>
-            </div>
-        </div>
-    </div>
+     <div className="container-fluid head">
+        <h1>CHECK OUT</h1>
+        <p>
+          <a href="/">Home</a> <span className="my-2">-</span> Check out
+        </p>
+      </div>
 
 
 
@@ -137,7 +133,7 @@ export default function Checkout() {
             </div>
             <div class="col-lg-4">
                 <div class="card border-secondary mb-5">
-                    <div class="card-header bg-secondary border-0">
+                    <div class="card-header bg-secondary bg-color border-0">
                         <h4 class="font-weight-semi-bold m-0">Order Total</h4>
                     </div>
                     <div class="card-body">
@@ -172,7 +168,7 @@ export default function Checkout() {
                     </div>
                 </div>
                 <div class="card border-secondary mb-5">
-                    <div class="card-header bg-secondary border-0">
+                    <div class="card-header bg-secondary bg-color border-0">
                         <h4 class="font-weight-semi-bold m-0">Payment</h4>
                     </div>
                     <div class="card-body">
