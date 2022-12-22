@@ -1,0 +1,28 @@
+.text-truncate {
+    font-size: 20px;
+  }
+  .card-footer {
+    padding: 10px;
+  }
+  .card-features {
+    font-size: 14px;
+  }
+  .actualprice {
+    font-size: 14px;
+  }
+  .text-muted {
+    font-size: 14px;
+  }
+  .iconColor{
+    color: #D19C97
+  }
+  .innerStyle{
+    overflow: hidden;
+    
+  }
+  .innerStyle:hover img{
+    transform:scale(1.2)
+  }
+  .innerStyle img{
+    transition: all 1s ease;
+  }

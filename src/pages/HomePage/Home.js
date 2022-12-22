@@ -2,10 +2,9 @@ import React from "react";
 import Carosal from "../../Components/Carosal";
 import OwlDemo from "../../Components/OwlDemo";
 import Trendy from "../../Components/Trendy";
-import ProductList from "../../ProductsList";
-import Offers from "../../Offers";
-import Cards from '../../Cards';
-
+import Offers from "../../Components/Offers";
+import Cards from '../../Components/Cards';
+import ProductList from "../../Components/ProductsList";
 const Home = () => {
   return (
     <>
