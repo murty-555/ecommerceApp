@@ -1,0 +1,16 @@
+.button_PM{
+    background-color: #d19c97;
+    border-radius: 0px;
+}
+.button_PM:hover{
+    background-color: #c5837c;
+    color: #ffffff;
+}
+.quantity_er{
+    background-color: #edf1ff;
+}
+.button_PM, .quantity_er{
+    width: 40px;
+    margin: 0px;
+    border: none;
+}

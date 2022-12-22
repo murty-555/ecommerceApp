@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css';
+import '../App.css';
 import CheckIcon from '@mui/icons-material/Check';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import SwapHorizIcon from '@mui/icons-material/SwapHoriz';

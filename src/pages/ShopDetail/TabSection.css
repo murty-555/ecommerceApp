@@ -1,0 +1,157 @@
+.content {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .content h3 {
+    padding: 0px 0 5px 0px;
+  }
+  
+  .content p {
+    width: 100%;
+    height: 100%;
+  }
+  .active-content {
+    display: block;
+  }
+  .tab-text {
+    color: #d19c97;
+    font-size: 12px;
+    font-family: Poppins, sans-serif;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .tab-text {
+      font-size: 16px;
+    }
+  }
+  
+  .tab-text:hover {
+    color: black;
+  }
+  
+  .tab-content-heading {
+    color: #1c1c1c;
+    font-size: 18px;
+    margin: 0px 0px 16px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .tab-content-heading {
+      font-size: 32px;
+    }
+  }
+  
+  .tab-content-text {
+    color: #6f6f6f;
+    font-size: 16px;
+    margin: 0px 0px 16px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .tab-content-text {
+      font-size: 20px;
+    }
+  }
+  .review-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .review-container {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  .reviews {
+    color: #1c1c1c;
+    font-size: 16px;
+    margin: 0px 0px 24px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .reviews {
+      font-size: 24px;
+    }
+  }
+  .user-image {
+    height: 40px;
+    width: 40px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .user-image {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  
+  .review-user-name {
+    color: #1c1c1c;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    margin: 0px 0px 8px;
+    padding-left: 12px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .review-user-name {
+      font-size: 16px;
+    }
+  }
+  
+  .comment {
+    color: #6f6f6f;
+    margin: 0px 0px 16px;
+    font-size: 14px;
+    font-family: Poppins, sans-serif;
+    padding-left: 12px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .comment {
+      font-size: 18px;
+      padding-right: 120px;
+    }
+  }
+  .list-group-item {
+    color: #6f6f6f;
+    font-size: 17px;
+    padding: 12px 0px;
+    background: #ffffff;
+  }
+  
+  .note {
+    color: #6f6f6f;
+    font-size: 13px;
+    font-family: Poppins, sans-serif;
+  }
+  
+  .review-text {
+    color: #6f6f6f;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+  }
+  
+  .textarea {
+    height: 140px;
+  }
+  
+  .name-input {
+    height: 40px;
+  }
+  
+  .review-button {
+    height: 40px;
+    border: none;
+    background-color: #d19c97;
+    width: 180px;
+  }
+  
+  .review-button:hover {
+    color: #ffffff;
+  }
