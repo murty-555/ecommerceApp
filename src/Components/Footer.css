@@ -65,20 +65,3 @@
     color: #d19197 !important;
 } */
 
-.back-to-top{
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 11;
-    cursor: pointer;
-    color: #252129;
-    width: 40px;
-    height: 40px;
-    animation: action 1s infinite alternate;
-    border-radius: 0;
-  }
-
-  @keyframes action {
-    0%{transform: translateY(0);}
-    100%{transform: translateY(-15px);}
-  }
