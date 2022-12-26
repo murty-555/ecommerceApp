@@ -1,4 +1,14 @@
-.back-to-top{
+.back-to-top-container .btn-primary{
+    display: block;
+    width: 100%;
+    color: #212529;
+    background-color: #d19197;
+}
+.back-to-top-container .btn-primary:hover{
+    color: white;
+    background-color: #d3838b;
+}
+.back-to-top-container .back-to-top{
     position: fixed;
     bottom: 30px;
     right: 30px;
