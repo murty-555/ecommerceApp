@@ -1,9 +1,14 @@
 import React from "react";
+import BackToTop from "./BackToTop";
 import "./Footer.css";
 import image from "./Images/payments.png";
 
 function Footer() {
+  
+
   return (
+    <>
+    <BackToTop/>
     <div className="container-fluid footer-container">
       <div className="container mt-5">
         <div className="row pt-5">
@@ -192,10 +197,8 @@ function Footer() {
           </div>
         </div>
       </div>
-      <a href="#" className="btn btn-primary back-to-top">
-        <i className="fa fa-angle-double-up"></i>
-      </a>
     </div>
+    </>
   );
 }
 
