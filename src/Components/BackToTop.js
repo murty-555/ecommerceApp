@@ -23,13 +23,13 @@ const BackToTop = () => {
     document.documentElement.scrollTop = 0;
   }
   return (
-    <>
+    <div className='back-to-top-container'>
     <button
         className={show ? "btn btn-primary back-to-top" : "d-none"}
         onClick={backToTop}>
         <i className="fa fa-angle-double-up"></i>
       </button>
-    </>
+    </div>
   )
 }
 
