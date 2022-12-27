@@ -7,7 +7,7 @@ function Register({ nameOfClass }) {
     <>
       <span
         type="button"
-        class={nameOfClass}
+        className={nameOfClass}
         data-toggle="modal"
         data-target="#exampleModalCenterForRegister"
       >
@@ -17,7 +17,7 @@ function Register({ nameOfClass }) {
       <div
         className="modal fade register-popup-page"
         id="exampleModalCenterForRegister"
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="exampleModalCenterForRegisterTitle"
         aria-hidden="true"
@@ -52,7 +52,7 @@ function Register({ nameOfClass }) {
                   </div>
                   <form className="register-page-form">
                     <div className="inputs">
-                      <input type="text" name="" id="name" className="input" placeholder="name"/>
+                      <input type="text" name="" id="registerName" className="input" placeholder="name"/>
                       {/* <label htmlFor="name" className="input-label">
                         name
                       </label> */}
@@ -61,7 +61,7 @@ function Register({ nameOfClass }) {
                       <input
                         type="email"
                         name=""
-                        id="email"
+                        id="registerEmail"
                         className="input"
                         placeholder="email"
                       />
@@ -73,7 +73,7 @@ function Register({ nameOfClass }) {
                       <input
                         type="text"
                         name=""
-                        id="username"
+                        id="registerUsername"
                         className="input"
                         placeholder="username"
                       />
@@ -85,7 +85,7 @@ function Register({ nameOfClass }) {
                       <input
                         type="password"
                         name=""
-                        id="password"
+                        id="registerPassword"
                         className="input"
                         placeholder="password"
                       />
@@ -115,7 +115,7 @@ function Register({ nameOfClass }) {
             <div className="modal-footer text-center">
               <button
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 data-dismiss="modal"
               >
                 Close

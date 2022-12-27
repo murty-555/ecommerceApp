@@ -17,7 +17,7 @@ function Login({ nameOfClass }) {
       <div
         className="modal fade login-popup-page"
         id="exampleModalCenter"
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true"
@@ -53,11 +53,11 @@ function Login({ nameOfClass }) {
                   <form className="login-page-form">
                     <div className="inputs">
                       {/* <label htmlFor="username" className="input-label">username</label> */}
-                      <input type="text" name="" id="username" className="input" placeholder="username"/>
+                      <input type="text" name="" id="loginUsername" className="input" placeholder="username"/>
                     </div>
                     <div className="inputs">
                       {/* <label htmlFor="password" className="input-label">password</label> */}
-                      <input type="password" name="" id="password" className="input" placeholder="password"/>
+                      <input type="password" name="" id="loginPassword" className="input" placeholder="password"/>
                     </div>
                     <div className="text-center login-button-container">
                     <button
@@ -76,7 +76,7 @@ function Login({ nameOfClass }) {
             <div className="modal-footer text-center">
               <button
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 data-dismiss="modal"
               >
                 Close
