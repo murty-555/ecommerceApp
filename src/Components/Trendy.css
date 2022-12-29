@@ -1,3 +1,23 @@
+.decorated{
+    overflow: hidden;
+    text-align: center;
+  }
+  .decorated > span{
+   position: relative;
+   display: inline-block;
+  }
+  .decorated > span:before, .decorated > span:after{
+   content: '';
+   position: absolute;
+   top: 50%;
+   border-bottom: 2px solid;
+   width: 50px;
+   margin: 0 10px;
+  }
+  .decorated > span:before{
+   right: 100%;
+  }
+
 .inner{
     overflow : hidden;
 }
@@ -10,3 +30,8 @@
 .text-primary {
     color: #D19C97 !important;
 }
+
+.back{
+    background-color:#edf1ff !important;
+}
+

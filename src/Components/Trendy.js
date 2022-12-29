@@ -1,7 +1,5 @@
 import React from 'react'
 import './Trendy.css'
-
-
 export default function Trendy() {
     const data = [
         {
@@ -62,11 +60,12 @@ export default function Trendy() {
         },
       ];
   return (
-    <center>
-        <div className='container-fluid pt-5'>
-         <div className="text-center mb-4">
-         <h2 className="section-title px-5"><span className="px-2">---Trandy Products---</span></h2>
-         </div>
+    <>
+        <div className='container-fluid pt-5 pb-5'>
+        <h2 className="decorated">
+          <span>Trendy Products</span>
+        </h2>
+        </div>
          <div className="row px-xl-5 pb-3">
          {data.map((item) => (
             <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
@@ -88,12 +87,13 @@ export default function Trendy() {
                 </div>
          ))}
             </div>
-     </div>
-        <div className="container-fluid bg-secondary my-5">
+     
+        <div className="container-fluid bg-secondary back my-5">
         <div className="row justify-content-md-center py-5 px-xl-5">
             <div className="col-md-6 col-12 py-5">
                 <div className="text-center mb-2 pb-2">
-                    <h2 className="section-title px-5 mb-3"><span className="bg-secondary px-2">Stay Updated</span></h2>
+                <div className='container-fluid pt-5'>
+                <h2 className="decorated"><span>Stay Updated</span></h2></div>
                     <p>Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at justo ipsum eirmod duo labore labore.</p>
                 </div>
                 <form>
@@ -108,10 +108,11 @@ export default function Trendy() {
         </div>
     </div>
 
-    <div className='container-fluid pt-5'>
-         <div className="text-center mb-4">
-         <h2 className="section-title px-5"><span className="px-2">---Just Arrived---</span></h2>
-         </div>
+    <div className='container-fluid pt-5 pb-5'>
+        <h2 className="decorated">
+          <span>Just Arrived</span>
+        </h2>
+        </div>
          <div className="row px-xl-5 pb-3">
          {data.map((item) => (
             <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
@@ -133,8 +134,6 @@ export default function Trendy() {
                 </div>
          ))}
             </div>
-
-         </div>
-    </center>
+    </>
   )
 }
