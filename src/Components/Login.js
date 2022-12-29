@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
+import {useDispatch} from "react-redux"
 import imageForLogin from "./Images/login-page-image-svg.svg";
+import { actionTypes } from "../actions/actionTypes";
+import loginUser from "../actions/loginAction";
+
 
 function Login({ nameOfClass }) {
+  const dispatch=useDispatch()
+  const [userName, setUsername]=useState("")
+  const [password,setPassword]=useState("")
+ const loginHandler=()=>{
+  dispatch(loginUser(userName,password))
+
+
+ }
   return (
     <>
       <span
@@ -33,6 +45,7 @@ function Login({ nameOfClass }) {
               </h5>
               <button
                 type="button"
+
                 className="close"
                 data-dismiss="modal"
                 aria-label="Close"
@@ -53,15 +66,16 @@ function Login({ nameOfClass }) {
                   <form className="login-page-form">
                     <div className="inputs">
                       {/* <label htmlFor="username" className="input-label">username</label> */}
-                      <input type="text" name="" id="loginUsername" className="input" placeholder="username"/>
+                      <input type="text" name="" onChange={(event)=>{setUsername(event.target.value)}} id="loginUsername" className="input" placeholder="username"/>
                     </div>
                     <div className="inputs">
                       {/* <label htmlFor="password" className="input-label">password</label> */}
-                      <input type="password" name="" id="loginPassword" className="input" placeholder="password"/>
+                      <input type="password" name="" onChange={(event)=>{setPassword(event.target.value)}} id="loginPassword" className="input" placeholder="password"/>
                     </div>
                     <div className="text-center login-button-container">
                     <button
                       type="button"
+                      onClick={loginHandler}
                       className="btn btn-primary login-button"
                     >
                       Login
