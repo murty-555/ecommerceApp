@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Header1 from "./Header1";
-import "./Header.css"
+
+import "./Header.css";
+// import {useSelector,useDispatch} from "react-redux";
+// import { actionTypes } from "../actions/actionTypes";
+
 const Header=()=>{
+    // const dispatch=useDispatch()
+    // const state=useSelector(state=>state.isLogedIn)
+    // // const [data,setData]=useState(state)
+
     
+    // const cartHandler=()=>{
+    //     dispatch({type:actionTypes.LOGIN_SUCCESSS})
+        
+
+    // }
+    // console.log(state)
     return(
         <>
         <div className="container-fluid header-container" >
