@@ -93,8 +93,9 @@ const options = {
 
 const Car = () => {
     return (
-        <div className="container-fluid m-3 ">
-          <h2 style={{textAlign:'center'}}>-----You May Like This------</h2>
+      <div>
+      <div className='container-fluid pt-5 pb-5'>
+      <h2 className="decorated"><span>Contact For Any Queries</span></h2></div>
       <OwlCarousel {...options}>
         {data.map((item) => (
           <div key={item.id} className="m-3">
