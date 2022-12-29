@@ -15,10 +15,8 @@ const Contactus = () => {
         </div>
 
         
-      <div className="container-fluid pt-5">
-        <div className="text-center mb-4">
-            <h2 className="section-title px-5"><span className="px-2">---Contact For Any Queries---</span></h2>
-        </div>
+        <div className='container-fluid pt-5 pb-5'>
+                <h2 className="decorated"><span>Contact For Any Queries</span></h2></div>
         <div className="row px-xl-5">
             <div className="col-lg-7 mb-5">
                 <div className="contact-form">
@@ -64,7 +62,6 @@ const Contactus = () => {
                 </div>
             </div>
         </div>
-    </div>
     
     </div>
   )
