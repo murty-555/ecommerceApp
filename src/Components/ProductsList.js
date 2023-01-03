@@ -1,5 +1,6 @@
 import React from 'react'
-import './ProductsList.css'
+import './ProductsList.css';
+
 const App = () => {
   return (
     <center>
