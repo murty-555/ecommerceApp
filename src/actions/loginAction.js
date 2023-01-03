@@ -1,5 +1,5 @@
 import axios from "axios";
-import { actionTypes } from "./actionTypes";
+import { actionTypes } from "./actionTypes/loginActionTypes";
 const BASE_URL="https://fakestoreapi.com/";
 const loginUser=(username,password)=>{
     return (dispatch)=>{
