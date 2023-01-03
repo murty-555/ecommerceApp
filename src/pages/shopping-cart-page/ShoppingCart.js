@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ShoppingCart.css";
 import cartData from "./cartData/index";
 import InputGroup from "./inputGroup/InputGroup";
+import PageHeader from "../../Components/page-header/PageHeader";
 
 const ShoppingCart = () => {
   const [items, setItems] = useState(cartData);
@@ -16,16 +17,13 @@ const ShoppingCart = () => {
     setItems(newItems);
   };
 
-  const grandTotal = items
-    .reduce((total, item) => total + item.qty * item.price, 0);
+  const grandTotal = items.reduce(
+    (total, item) => total + item.qty * item.price,
+    0
+  );
   return (
     <div className="shoppingCart">
-      <div className="container-fluid head">
-        <h1>SHOPPING CART</h1>
-        <p>
-          <a href="/">Home</a> <span className="my-2">-</span> Shopping Cart
-        </p>
-      </div>
+      <PageHeader headerName={"Shopping Cart"} />
       <div className="row container-fluid body mx-0 px-xl-5 pt-5">
         <div className="col-12 col-lg-8 table-container text-center mb-5">
           <table className="table table-bordered mb-0">
@@ -39,23 +37,23 @@ const ShoppingCart = () => {
               </tr>
             </thead>
             <tbody>
-              {items.map(item => (
+              {items.map((item) => (
                 <tr key={item.src}>
-                <td>
-                  <img src={item.src} alt="img" />
-                  {item.name}
-                </td>
-                <td className="align-middle">${item.price}</td>
-                <td className="align-middle">
-                  <InputGroup updateQty={updateQty} {...item}/>
-                </td>
-                <td className="align-middle">${item.price * item.qty}</td>
-                <td className="align-middle">
-                  <button>
-                    <i className="fas fa-times"></i>
-                  </button>
-                </td>
-              </tr>
+                  <td>
+                    <img src={item.src} alt="img" />
+                    {item.name}
+                  </td>
+                  <td className="align-middle">${item.price}</td>
+                  <td className="align-middle">
+                    <InputGroup updateQty={updateQty} {...item} />
+                  </td>
+                  <td className="align-middle">${item.price * item.qty}</td>
+                  <td className="align-middle">
+                    <button>
+                      <i className="fas fa-times"></i>
+                    </button>
+                  </td>
+                </tr>
               ))}
             </tbody>
           </table>
@@ -80,7 +78,9 @@ const ShoppingCart = () => {
                 <h5>Total</h5>
                 <h5>${grandTotal + 10}</h5>
               </div>
-              <button className="btn btn-block checkout-button">Proceed To Checkout</button>
+              <button className="btn btn-block checkout-button">
+                Proceed To Checkout
+              </button>
             </div>
           </div>
         </div>
