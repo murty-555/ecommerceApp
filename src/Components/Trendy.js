@@ -88,7 +88,7 @@ export default function Trendy() {
          ))}
             </div>
      
-        <div className="container-fluid bg-secondary back my-5">
+        <div className="container-fluid bg-secondary backcolor my-5">
         <div className="row justify-content-md-center py-5 px-xl-5">
             <div className="col-md-6 col-12 py-5">
                 <div className="text-center mb-2 pb-2">
