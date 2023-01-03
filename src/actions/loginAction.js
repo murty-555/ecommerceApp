@@ -1,5 +1,3 @@
-
-import react from "react";
 import axios from "axios";
 import { actionTypes } from "./actionTypes";
 const BASE_URL="https://fakestoreapi.com/";
