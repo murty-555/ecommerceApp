@@ -1,26 +1,66 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ShoppingCart.css";
-import cartData from "./cartData/index";
-import InputGroup from "./inputGroup/InputGroup";
 import PageHeader from "../../Components/page-header/PageHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { actionTypes } from "../../actions/actionTypes/cartActionTypes";
 
 const ShoppingCart = () => {
-  const [items, setItems] = useState(cartData);
+  const dispatch = useDispatch();
+  // const navigate = useNavigate();
+  const { cartList } = useSelector((state) => state.cart);
 
-  const updateQty = (id, newQty) => {
-    const newItems = items.map((item) => {
-      if (item.id === id) {
-        return { ...item, qty: newQty };
-      }
-      return item;
+  // const [items, setItems] = useState(cartData);
+  let totalCart = 0;
+  cartList.forEach(function (item) {
+    totalCart += Math.round(item.quantity * item.price);
+  });
+
+  function TotalPrice(price, tonggia) {
+    return Number(price * tonggia).toLocaleString("en-US");
+  }
+
+  const subtractOne = (key) => {
+    dispatch({
+      type: actionTypes.DECREASE_CART_QTY,
+      payload: key,
     });
-    setItems(newItems);
   };
 
-  const grandTotal = items.reduce(
-    (total, item) => total + item.qty * item.price,
-    0
-  );
+  const addOne = (key) => {
+    dispatch({
+      type: actionTypes.INCREASE_CART_QTY,
+      payload: key,
+    });
+  };
+
+  const deleteHandler = (item,key) => {
+    if(item.quantity === 1){
+    dispatch({
+      type: actionTypes.DELETE_FROM_CART,
+      payload: key,
+    });
+  }else{
+    dispatch({
+      type: actionTypes.DECREASE_CART_QTY,
+      payload: key,
+    });
+  }
+  };
+  // const updateQty = (id, newQty) => {
+  //   const newItems = items.map((item) => {
+  //     if (item.id === id) {
+  //       return { ...item, qty: newQty };
+  //     }
+  //     return item;
+  //   });
+  //   setItems(newItems);
+  // };
+
+  // const grandTotal = items.reduce(
+  //   (total, item) => total + item.qty * item.price,
+  //   0
+  // );
   return (
     <div className="shoppingCart">
       <PageHeader headerName={"Shopping Cart"} />
@@ -37,19 +77,38 @@ const ShoppingCart = () => {
               </tr>
             </thead>
             <tbody>
-              {items.map((item) => (
-                <tr key={item.src}>
+              {cartList.map((item, key) => (
+                <tr key={key}>
                   <td>
-                    <img src={item.src} alt="img" />
-                    {item.name}
+                    <img src={item.image} alt="img" />
+                    {item.title}
                   </td>
                   <td className="align-middle">${item.price}</td>
                   <td className="align-middle">
-                    <InputGroup updateQty={updateQty} {...item} />
+                    <div
+                      className="btn-group"
+                      role="group"
+                      aria-label="Basic example"
+                    >
+                      <button
+                        onClick={() => subtractOne(key)}
+                        disabled={item.quantity <= 1}
+                      >
+                        <i className="fas fa-minus"></i>
+                      </button>
+                      <span className="quantity text-center">
+                        {item.quantity}
+                      </span>
+                      <button onClick={() => addOne(key)}>
+                        <i className="fas fa-plus"></i>
+                      </button>
+                    </div>
                   </td>
-                  <td className="align-middle">${item.price * item.qty}</td>
                   <td className="align-middle">
-                    <button>
+                    ${TotalPrice(item.price, item.quantity)}
+                  </td>
+                  <td className="align-middle">
+                    <button onClick={() => deleteHandler(item,key)}>
                       <i className="fas fa-times"></i>
                     </button>
                   </td>
@@ -66,17 +125,17 @@ const ShoppingCart = () => {
             <div className="card-body">
               <div className="d-flex justify-content-between mt-3">
                 <h6>Subtotal</h6>
-                <h6>${grandTotal}</h6>
+                <h6>${Number(totalCart).toLocaleString("en-US")}</h6>
               </div>
               <div className="d-flex justify-content-between mt-3">
                 <h6>Shipping</h6>
-                <h6>$10</h6>
+                <h6>Free</h6>
               </div>
             </div>
             <div className="card-footer">
               <div className="d-flex justify-content-between mb-3">
                 <h5>Total</h5>
-                <h5>${grandTotal + 10}</h5>
+                <h5>${Number(totalCart).toLocaleString("en-US")}</h5>
               </div>
               <button className="btn btn-block checkout-button">
                 Proceed To Checkout
