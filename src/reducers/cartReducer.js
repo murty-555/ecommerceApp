@@ -1,4 +1,4 @@
-import { actionTypes } from "../actions/actionTypes/cartActionTypes";
+import { cartActionTypes } from "../actions/actionTypes/cartActionTypes";
 
 const initialState = {
     cart_count : 0,
@@ -7,9 +7,9 @@ const initialState = {
 
 const cartReducer = (state=initialState,action) => {
     switch(action.payload){
-        case actionTypes.GET_CART_COUNT:
+        case cartActionTypes.GET_CART_COUNT:
             return {...state}
-        case actionTypes.ADD_TO_CART:
+        case cartActionTypes.ADD_TO_CART:
             if(state.cart_count === 0){
                 let cart = {
                     id: action.payload.id,
@@ -43,18 +43,18 @@ const cartReducer = (state=initialState,action) => {
                 ...state,
                 cart_count: state.cart_count + 1
             }
-        case actionTypes.INCREASE_CART_QTY:
+        case cartActionTypes.INCREASE_CART_QTY:
             state.cart_count ++
             state.cartList[action.payload].quantity++;
             return{...state}
-        case actionTypes.DECREASE_CART_QTY:
+        case cartActionTypes.DECREASE_CART_QTY:
             let quantity = state.cartList[action.payload].quantity;
             if(quantity > 1){
                 state.cart_count--;
                 state.cartList[action.payload].quantity--;
             }
             return {...state}
-        case actionTypes.DELETE_FROM_CART:
+        case cartActionTypes.DELETE_FROM_CART:
             let _quantity = state.cartList[action.payload].quantity;
             return{
                 ...state,

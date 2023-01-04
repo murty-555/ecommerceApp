@@ -1,8 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import PageHeader from "../../Components/page-header/PageHeader";
 import "./Checkout.css";
 
 export default function Checkout() {
+  const items = useSelector(state => state.cart);
+  
+  let totalCart = 0;
+  items.cartList.forEach(function (item) {
+    totalCart += Math.round(item.quantity * item.price);
+  });
+
   return (
     <div>
       <PageHeader headerName={"Check Out"} />
@@ -219,32 +227,26 @@ export default function Checkout() {
               </div>
               <div className="card-body">
                 <h5 className="font-weight-medium mb-3">Products</h5>
-                <div className="d-flex justify-content-between">
-                  <p>Colorful Stylish Shirt 1</p>
-                  <p>$150</p>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <p>Colorful Stylish Shirt 2</p>
-                  <p>$150</p>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <p>Colorful Stylish Shirt 3</p>
-                  <p>$150</p>
-                </div>
+                {items.cartList.map((item, key) => (
+                  <div className="d-flex justify-content-between" key={key}>
+                    <p>{item.title}</p>
+                    <p>${Math.round(item.price * item.quantity)}</p>
+                  </div>
+                ))}
                 <hr className="mt-0" />
                 <div className="d-flex justify-content-between mb-3 pt-1">
                   <h6 className="font-weight-medium">Subtotal</h6>
-                  <h6 className="font-weight-medium">$150</h6>
+                  <h6 className="font-weight-medium">${totalCart}</h6>
                 </div>
                 <div className="d-flex justify-content-between">
                   <h6 className="font-weight-medium">Shipping</h6>
-                  <h6 className="font-weight-medium">$10</h6>
+                  <h6 className="font-weight-medium">Free</h6>
                 </div>
               </div>
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="font-weight-bold">Total</h5>
-                  <h5 className="font-weight-bold">$160</h5>
+                  <h5 className="font-weight-bold">${totalCart}</h5>
                 </div>
               </div>
             </div>

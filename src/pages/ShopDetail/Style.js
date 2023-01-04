@@ -18,7 +18,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import fetchShopDetails from "../../actions/ShopDetailAction";
 import LoadingSpinner from "../../Components/Spinner/LoadingSpinner";
-import { actionTypes } from "../../actions/actionTypes/cartActionTypes";
+import { cartActionTypes } from "../../actions/actionTypes/cartActionTypes";
 const Style = () => {
   const { product, isLoading } = useSelector((state) => ({
     ...state.shopDetail,
@@ -26,12 +26,12 @@ const Style = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  const addTocartHandler = (item) => {
-    dispatch({
-      type: actionTypes.ADD_TO_CART,
-      payload: item,
-    });
-  };
+  // const addTocartHandler = (item) => {
+  //   dispatch({
+  //     type: cartActionTypes.ADD_TO_CART,
+  //     payload: item,
+  //   });
+  // };
 
   useEffect(() => {
     dispatch(fetchShopDetails(id));
@@ -39,14 +39,14 @@ const Style = () => {
 
   // const subtractOne = (key) => {
   //   dispatch({
-  //     type: actionTypes.DECREASE_CART_QTY,
+  //     type: cartActionTypes.DECREASE_CART_QTY,
   //     payload: key
   //   })
   // }
 
   // const addOne = (key) => {
   //   dispatch({
-  //     type: actionTypes.INCREASE_CART_QTY,
+  //     type: cartActionTypes.INCREASE_CART_QTY,
   //     payload: key
   //   })
   // }
@@ -193,10 +193,10 @@ const Style = () => {
                   </button>
                   <span className="quantity_er text-center">
                     {/* {product.quantity} */}1
-                    </span>
-                  <button 
-                  // onClick={() => addOne(product.id)}
-                  className="button_PM"
+                  </span>
+                  <button
+                    // onClick={() => addOne(product.id)}
+                    className="button_PM"
                   >
                     <i className="fas fa-plus"></i>
                   </button>
@@ -204,16 +204,19 @@ const Style = () => {
                 <div className="cart_color d-flex ">
                   <button
                     className="cart_color"
+                    onClick={() => {
+                      dispatch({
+                        type: cartActionTypes.ADD_TO_CART,
+                        payload: product,
+                      });
+                    }}
                     style={{
                       borderStyle: "solid",
                       border: "0",
                       paddingRight: "20px",
                     }}
                   >
-                    <ShoppingCartIcon
-                      onClick={() => addTocartHandler(product)}
-                    />{" "}
-                    Add To Cart
+                    <ShoppingCartIcon /> Add To Cart
                   </button>
                 </div>
               </div>

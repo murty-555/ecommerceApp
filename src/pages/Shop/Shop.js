@@ -6,11 +6,11 @@ import LoadingSpinner from "../../Components/Spinner/LoadingSpinner";
 import { useDispatch, useSelector } from "react-redux";
 import fetchProducts from "../../actions/productsAction";
 import { Link } from "react-router-dom";
-import { actionTypes } from "../../actions/actionTypes/cartActionTypes";
+import { cartActionTypes } from "../../actions/actionTypes/cartActionTypes";
 
 const Shop = () => {
   const dispatch = useDispatch();
-  const { productsList, isLoading } = useSelector(state => state.products);
+  const { productsList, isLoading } = useSelector((state) => state.products);
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
@@ -19,12 +19,12 @@ const Shop = () => {
   //   console.log(productsList);
   // }
 
-  const addToCartHandler = (item) => {
-    dispatch({
-      type: actionTypes.ADD_TO_CART,
-      payload: item
-    })
-  }
+  // const addToCartHandler = (item) => {
+  //   dispatch({
+  //     type: actionTypes.ADD_TO_CART,
+  //     payload: item
+  //   })
+  // }
 
   return (
     <div>
@@ -88,8 +88,11 @@ const Shop = () => {
                   {isLoading ? (
                     <LoadingSpinner />
                   ) : (
-                    productsList.map((item,key) => (
-                      <div className="col-lg-4 col-md-6 col-sm-12 pb-1" key={key}>
+                    productsList.map((item, key) => (
+                      <div
+                        className="col-lg-4 col-md-6 col-sm-12 pb-1"
+                        key={key}
+                      >
                         <div className="card product-item border-0 mb-4">
                           <div className="card-header inner product-img position-relative overflow-hidden bg-transparent border pt-2">
                             <img
@@ -108,11 +111,22 @@ const Shop = () => {
                             </div>
                           </div>
                           <div className="card-footer d-flex justify-content-between bg-light border">
-                            <Link to={`/shop/${item.id}`} className="btn btn-sm text-dark p-0">
+                            <Link
+                              to={`/shop/${item.id}`}
+                              className="btn btn-sm text-dark p-0"
+                            >
                               <i className="fas fa-eye text-primary mr-1"></i>
                               View Detail
                             </Link>
-                            <button className="btn btn-sm text-dark p-0" onClick={() => addToCartHandler(item)}>
+                            <button
+                              className="btn btn-sm text-dark p-0"
+                              onClick={() =>
+                                dispatch({
+                                  type: cartActionTypes.ADD_TO_CART,
+                                  payload: item,
+                                })
+                              }
+                            >
                               <i className="fas fa-shopping-cart text-primary mr-1"></i>
                               Add To Cart
                             </button>
@@ -123,7 +137,7 @@ const Shop = () => {
                   )}
                 </div>
               </div>
-              <div class="col-12 pb-1">
+              {/* <div class="col-12 pb-1">
                 <nav aria-label="Page navigation">
                   <ul class="pagination justify-content-center mb-3">
                     <li class="page-item disabled">
@@ -158,7 +172,7 @@ const Shop = () => {
                     </li>
                   </ul>
                 </nav>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Carosal.css";
 const Carosal=()=>{
     
@@ -14,7 +15,7 @@ const Carosal=()=>{
                                 <div className="p-3" style={{maxWidth: "700px"}}>
                                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
                                     <h3 className="display-4 text-white font-weight-semi-bold mb-4">Fashionable Dress</h3>
-                                    <a href="/" className="btn btn-light text-dark py-2 px-3 " style={{backgroundColor:"white"}}>Shop Now</a>
+                                    <Link to="/shop" className="btn btn-light text-dark py-2 px-3 " style={{backgroundColor:"white"}}>Shop Now</Link>
                                 </div>
                             </div>
                         </div>
@@ -24,7 +25,7 @@ const Carosal=()=>{
                                 <div className="p-3" style={{maxWidth: "700px"}}>
                                     <h4 className="text-light text-uppercase font-weight-medium mb-3 d-md-block">10% Off Your First Order</h4>
                                     <h3 className="display-4 text-white font-weight-semi-bold mb-4 ">Reasonable Price</h3>
-                                    <a href="/" className="btn btn-light text-dark py-2 px-3 button  " style={{backgroundColor:"white"}}>Shop Now</a>
+                                    <Link to="/shop" className="btn btn-light text-dark py-2 px-3 button  " style={{backgroundColor:"white"}}>Shop Now</Link>
                                 </div>
                             </div>
                         </div>
