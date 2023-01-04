@@ -8,7 +8,7 @@ const fetchProducts = () => {
       type: actionTypes.FETCH_PRODUCTS,
     });
     try {
-      const response = await axios.get(BASE_URL + "products?limit=8");
+      const response = await axios.get(BASE_URL + "products?limit=9");
       const products = await response.data;
       dispatch({
         type: actionTypes.FETCH_SUCCESS,

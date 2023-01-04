@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Header1 from "./Header1";
 
 import "./Header.css";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 // import {useSelector,useDispatch} from "react-redux";
 // import { actionTypes } from "../actions/actionTypes";
 
 const Header=()=>{
+    const {cart_count} = useSelector(state => state.cart)
     // const dispatch=useDispatch()
     // const state=useSelector(state=>state.isLogedIn)
     // // const [data,setData]=useState(state)
@@ -73,10 +76,10 @@ const Header=()=>{
                     <i className="fas fa-heart text-primary"></i>
                     <span className="badge text-dark">0</span>
                 </a>
-                <a href="/" className="btn border">
+                <Link to='/shoppingCart' className="btn border">
                     <i className="fas fa-shopping-cart text-primary"></i>
-                    <span className="badge text-dark">0</span>
-                </a>
+                    <span className="badge text-dark">{cart_count}</span>
+                </Link>
             </div>
         </div>
     </div>

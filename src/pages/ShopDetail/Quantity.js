@@ -14,10 +14,10 @@ const Quantity = () => {
   };
   return (
     <div className="btn-group" role="group" aria-label="Basic example">
-      <button className='button_PM' onClick={decrease}>
+      <button className='button_PM' onClick={decrease} disabled={value <= 1}>
         <RemoveIcon/>
       </button>
-      <input type="text" className="quantity_er text-center" value={value} />
+      <span type="text" className="quantity_er text-center">{value}</span>
       <button onClick={increase} className='button_PM'>
         <AddIcon/>
       </button>
