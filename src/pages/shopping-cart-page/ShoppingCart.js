@@ -3,16 +3,16 @@ import "./ShoppingCart.css";
 import PageHeader from "../../Components/page-header/PageHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { actionTypes } from "../../actions/actionTypes/cartActionTypes";
+import { cartActionTypes } from "../../actions/actionTypes/cartActionTypes";
 
 const ShoppingCart = () => {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
-  const { cartList } = useSelector((state) => state.cart);
+  const navigate = useNavigate();
+  const items = useSelector((state) => state.cart);
 
   // const [items, setItems] = useState(cartData);
   let totalCart = 0;
-  cartList.forEach(function (item) {
+  items.cartList.forEach(function (item) {
     totalCart += Math.round(item.quantity * item.price);
   });
 
@@ -20,33 +20,38 @@ const ShoppingCart = () => {
     return Number(price * tonggia).toLocaleString("en-US");
   }
 
-  const subtractOne = (key) => {
-    dispatch({
-      type: actionTypes.DECREASE_CART_QTY,
-      payload: key,
-    });
+  const decreaseQtyHandler = (item, key) => {
+    if (item.quantity === 1) {
+      dispatch({
+        type: cartActionTypes.DELETE_FROM_CART,
+        payload: key,
+      });
+    } else {
+      dispatch({
+        type: cartActionTypes.DECREASE_CART_QTY,
+        payload: key,
+      });
+    }
   };
 
-  const addOne = (key) => {
-    dispatch({
-      type: actionTypes.INCREASE_CART_QTY,
-      payload: key,
-    });
-  };
-
-  const deleteHandler = (item,key) => {
-    if(item.quantity === 1){
-    dispatch({
-      type: actionTypes.DELETE_FROM_CART,
-      payload: key,
-    });
-  }else{
-    dispatch({
-      type: actionTypes.DECREASE_CART_QTY,
-      payload: key,
-    });
+  const navigateToCheckout = () => {
+    navigate('/checkout');
   }
-  };
+  // const subtractOne = (key) => {
+  //   dispatch({
+  //     type: cartActionTypes.DECREASE_CART_QTY,
+  //     payload: key,
+  //   });
+  // };
+
+  // const addOne = (key) => {
+  //   dispatch({
+  //     type: cartActionTypes.INCREASE_CART_QTY,
+  //     payload: key,
+  //   });
+  // };
+
+ 
   // const updateQty = (id, newQty) => {
   //   const newItems = items.map((item) => {
   //     if (item.id === id) {
@@ -77,7 +82,7 @@ const ShoppingCart = () => {
               </tr>
             </thead>
             <tbody>
-              {cartList.map((item, key) => (
+              {items.cartList.map((item, key) => (
                 <tr key={key}>
                   <td>
                     <img src={item.image} alt="img" />
@@ -91,7 +96,7 @@ const ShoppingCart = () => {
                       aria-label="Basic example"
                     >
                       <button
-                        onClick={() => subtractOne(key)}
+                        onClick={() => decreaseQtyHandler(item,key)}
                         disabled={item.quantity <= 1}
                       >
                         <i className="fas fa-minus"></i>
@@ -99,7 +104,14 @@ const ShoppingCart = () => {
                       <span className="quantity text-center">
                         {item.quantity}
                       </span>
-                      <button onClick={() => addOne(key)}>
+                      <button
+                        onClick={() =>
+                          dispatch({
+                            type: cartActionTypes.INCREASE_CART_QTY,
+                            payload: key,
+                          })
+                        }
+                      >
                         <i className="fas fa-plus"></i>
                       </button>
                     </div>
@@ -108,7 +120,14 @@ const ShoppingCart = () => {
                     ${TotalPrice(item.price, item.quantity)}
                   </td>
                   <td className="align-middle">
-                    <button onClick={() => deleteHandler(item,key)}>
+                    <button
+                      onClick={() =>
+                        dispatch({
+                          type: cartActionTypes.DELETE_FROM_CART,
+                          payload: key,
+                        })
+                      }
+                    >
                       <i className="fas fa-times"></i>
                     </button>
                   </td>
@@ -137,7 +156,7 @@ const ShoppingCart = () => {
                 <h5>Total</h5>
                 <h5>${Number(totalCart).toLocaleString("en-US")}</h5>
               </div>
-              <button className="btn btn-block checkout-button">
+              <button className="btn btn-block checkout-button" onClick={navigateToCheckout}>
                 Proceed To Checkout
               </button>
             </div>

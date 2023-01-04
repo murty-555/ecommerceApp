@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import fetchProducts from '../../actions/productsAction';
 import { Link } from 'react-router-dom';
+import { cartActionTypes } from '../../actions/actionTypes/cartActionTypes';
 
 const options = {
   margin:30,
@@ -44,17 +45,13 @@ const Car = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  const addTocartHandler = () => {
-    return
-  }
-
     return (
       <div>
       <div className='container-fluid pt-5 pb-5'>
       <h2 className="decorated"><span>You May Like This</span></h2></div>
       <OwlCarousel {...options}>
-        {productsList.map((item) => (
-          <div key={item.id} className="m-3">
+        {productsList.map((item,key) => (
+          <div key={key} className="m-3">
             <div className="card product-item border-0 mb-4">
               <div className="card-header product-img position-relative overflow-hidden bg-transparent border p-0 innerStyle">
                 <img className="img-fluid w-100" src={item.image} alt="" />
@@ -72,7 +69,12 @@ const Car = () => {
                 <Link to={`/shop/${item.id}`} className="btn card-features text-dark p-0">
                   <i className="fas fa-eye iconColor mr-1"></i>View Detail
                 </Link>
-                <button className="btn card-features  text-dark p-0" onClick={addTocartHandler}>
+                <button className="btn card-features  text-dark p-0" onClick={() => {
+                  dispatch({
+                    type: cartActionTypes.ADD_TO_CART,
+                    payload: item
+                  })
+                }}>
                   <i className="fas fa-shopping-cart iconColor mr-1"></i>Add To
                   Cart
                 </button>

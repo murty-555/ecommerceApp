@@ -1,4 +1,4 @@
-import { actionTypes } from "../actions/actionTypes/loginActionTypes";
+import { loginActionTypes } from "../actions/actionTypes/loginActionTypes";
 const initialState={
     isLoading:false,
     isLogedIn:false,
@@ -8,11 +8,11 @@ const initialState={
 }
 const loginReducer=(state=initialState,action)=>{
     switch(action.type){
-        case actionTypes.IS_LOADING:
+        case loginActionTypes.IS_LOADING:
             return {...state, isLoading:true}
-        case actionTypes.LOGIN_SUCCESSS:
+        case loginActionTypes.LOGIN_SUCCESSS:
             return {isLoading:false, isLogedIn:true,errMsg:null, username:action.payload}
-        case actionTypes.LOGIN_FAILURE:
+        case loginActionTypes.LOGIN_FAILURE:
             return {isLoading:false,isLogedIn:false,errMsg:action.payload}
         default:
             return state
