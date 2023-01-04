@@ -26,23 +26,9 @@ const Style = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  // const addTocartHandler = (item) => {
-  //   dispatch({
-  //     type: cartActionTypes.ADD_TO_CART,
-  //     payload: item,
-  //   });
-  // };
-
   useEffect(() => {
     dispatch(fetchShopDetails(id));
   }, [dispatch, id]);
-
-  // const subtractOne = (key) => {
-  //   dispatch({
-  //     type: cartActionTypes.DECREASE_CART_QTY,
-  //     payload: key
-  //   })
-  // }
 
   // const addOne = (key) => {
   //   dispatch({
@@ -50,6 +36,20 @@ const Style = () => {
   //     payload: key
   //   })
   // }
+
+  // const decreaseQtyHandler = (item, key) => {
+  //   if (item.quantity === 1) {
+  //     dispatch({
+  //       type: cartActionTypes.DELETE_FROM_CART,
+  //       payload: key,
+  //     });
+  //   } else {
+  //     dispatch({
+  //       type: cartActionTypes.DECREASE_CART_QTY,
+  //       payload: key,
+  //     });
+  //   }
+  // };
 
   return (
     <div className="container-fluid d-flex">
@@ -185,7 +185,7 @@ const Style = () => {
                   aria-label="Basic example"
                 >
                   <button
-                    // onClick={() => subtractOne(product.id)}
+                    // onClick={decreaseQtyHandler(product,product.id)}
                     className="button_PM"
                     disabled={product.quantity <= 1}
                   >
