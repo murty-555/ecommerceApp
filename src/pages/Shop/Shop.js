@@ -10,7 +10,7 @@ import { cartActionTypes } from "../../actions/actionTypes/cartActionTypes";
 
 const Shop = () => {
   const dispatch = useDispatch();
-  const { productsList, isLoading } = useSelector((state) => state.products);
+  const { productsList, isLoading } = useSelector((state) => ({...state.products}));
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
@@ -19,12 +19,12 @@ const Shop = () => {
   //   console.log(productsList);
   // }
 
-  // const addToCartHandler = (item) => {
-  //   dispatch({
-  //     type: actionTypes.ADD_TO_CART,
-  //     payload: item
-  //   })
-  // }
+  const addToCartHandler = (item) => {
+    dispatch({
+      type: cartActionTypes.ADD_TO_CART,
+      payload: item
+    })
+  }
 
   return (
     <div>
@@ -121,10 +121,7 @@ const Shop = () => {
                             <button
                               className="btn btn-sm text-dark p-0"
                               onClick={() =>
-                                dispatch({
-                                  type: cartActionTypes.ADD_TO_CART,
-                                  payload: item,
-                                })
+                                addToCartHandler(item)
                               }
                             >
                               <i className="fas fa-shopping-cart text-primary mr-1"></i>

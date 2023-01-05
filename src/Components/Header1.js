@@ -45,7 +45,7 @@ const Header1=()=>{
                         <div className="navbar-nav mr-auto py-0">
                             <Link to='/' className="nav-item  nav-link active">Home</Link>
                             <Link to="/shop" className="nav-item nav-link text-dark">Shop</Link>
-                            <Link to="/shop/:id" className="nav-item nav-link text-dark">Shop Detail</Link>
+                            <Link to="/shop/1" className="nav-item nav-link text-dark">Shop Detail</Link>
                             <div className="nav-item dropdown">
                                 <a href="/" className="nav-link dropdown-toggle text-dark" data-toggle="dropdown" aria-expanded="false">Pages</a>
                                 <div className="dropdown-menu rounded-0 m-0">

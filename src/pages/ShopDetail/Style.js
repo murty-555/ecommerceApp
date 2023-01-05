@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Style.css";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
@@ -25,10 +25,28 @@ const Style = () => {
   }));
   const dispatch = useDispatch();
   const { id } = useParams();
+  const [count,setCount] = useState(1);
+
+  const increaseOne = () => {
+    setCount(count => count + 1)
+  }
+
+  const decreaseOne = () => {
+    setCount(count => count - 1)
+  }
+
+  const addToCartHandler = (product) => {
+    dispatch({
+      type: cartActionTypes.ADD_TO_CART,
+      payload: {...product,quantity: count},
+    });
+  }
 
   useEffect(() => {
     dispatch(fetchShopDetails(id));
   }, [dispatch, id]);
+
+
 
   // const addOne = (key) => {
   //   dispatch({
@@ -78,11 +96,6 @@ const Style = () => {
               </div>
               <h3 style={{ marginBottom: "20px" }}> ${product.price}.00</h3>
               <p className="text">
-                {/* Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr
-                  erat diam stet sit clita ea. Sanc invidunt ipsum et, labore
-                  clita lorem magna lorem ut. Erat lorem duo dolor no sea
-                  nonumy.Accus labore stet, est lorem sit diam sea et justo,amet
-                  at lorem et eirmod ipsum diam et rebum kasd rebum. */}
                 {product.description}
               </p>
               <div className="d-flex">
@@ -185,17 +198,17 @@ const Style = () => {
                   aria-label="Basic example"
                 >
                   <button
-                    // onClick={decreaseQtyHandler(product,product.id)}
+                    onClick={decreaseOne}
                     className="button_PM"
-                    disabled={product.quantity <= 1}
+                    disabled={count <= 1}
                   >
                     <i className="fas fa-minus"></i>
                   </button>
                   <span className="quantity_er text-center">
-                    {/* {product.quantity} */}1
+                    {count}
                   </span>
                   <button
-                    // onClick={() => addOne(product.id)}
+                    onClick={increaseOne}
                     className="button_PM"
                   >
                     <i className="fas fa-plus"></i>
@@ -205,10 +218,7 @@ const Style = () => {
                   <button
                     className="cart_color"
                     onClick={() => {
-                      dispatch({
-                        type: cartActionTypes.ADD_TO_CART,
-                        payload: product,
-                      });
+                      addToCartHandler(product)
                     }}
                     style={{
                       borderStyle: "solid",
