@@ -6,9 +6,3 @@ export const cartActionTypes = {
     DELETE_FROM_CART : 'delete_from_cart',
     UPDATE_CART : 'update_cart'
 }
-
-export function GetNumberCart(){
-    return{
-        type:'get_cart_count'
-    }
-}

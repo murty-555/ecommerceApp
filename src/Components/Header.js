@@ -4,22 +4,14 @@ import Header1 from "./Header1";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import {useSelector,useDispatch} from "react-redux";
-// import { actionTypes } from "../actions/actionTypes";
 
 const Header=()=>{
-    const {cart_count} = useSelector(state => state.cart)
-    // const dispatch=useDispatch()
-    // const state=useSelector(state=>state.isLogedIn)
-    // // const [data,setData]=useState(state)
-
+    const {cartList} = useSelector(state => ({...state.cart}))
+    let cart_count = 0;
+    cartList.forEach(cartItem => {
+        cart_count += cartItem.quantity
+    });
     
-    // const cartHandler=()=>{
-    //     dispatch({type:actionTypes.LOGIN_SUCCESSS})
-        
-
-    // }
-    // console.log(state)
     return(
         <>
         <div className="container-fluid header-container" >

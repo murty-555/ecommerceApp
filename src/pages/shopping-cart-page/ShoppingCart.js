@@ -8,50 +8,42 @@ import { cartActionTypes } from "../../actions/actionTypes/cartActionTypes";
 const ShoppingCart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const items = useSelector((state) => state.cart);
+  const {cartList} = useSelector((state) => ({...state.cart}));
 
   // const [items, setItems] = useState(cartData);
   let totalCart = 0;
-  items.cartList.forEach(function (item) {
-    totalCart += Math.round(item.quantity * item.price);
+  cartList.forEach(function (carttem) {
+    totalCart += Math.round(carttem.quantity * carttem.price);
   });
 
   function TotalPrice(price, tonggia) {
     return Number(price * tonggia).toLocaleString("en-US");
   }
 
-  const decreaseQtyHandler = (item, key) => {
-    if (item.quantity === 1) {
-      dispatch({
-        type: cartActionTypes.DELETE_FROM_CART,
-        payload: key,
-      });
-    } else {
-      dispatch({
-        type: cartActionTypes.DECREASE_CART_QTY,
-        payload: key,
-      });
-    }
+  const decreaseQtyHandler = (key) => {
+    dispatch({
+      type: cartActionTypes.DECREASE_CART_QTY,
+      payload: key
+    });
   };
+  const increaseQtyHandler = (key) => {
+    dispatch({
+      type: cartActionTypes.INCREASE_CART_QTY,
+      payload: key
+    });
+  };
+  const deleteFromCartHandler = (key) => {
+    dispatch({
+      type: cartActionTypes.DELETE_FROM_CART,
+      payload: key
+    })
+  }
 
   const navigateToCheckout = () => {
-    navigate('/checkout');
-  }
-  // const subtractOne = (key) => {
-  //   dispatch({
-  //     type: cartActionTypes.DECREASE_CART_QTY,
-  //     payload: key,
-  //   });
-  // };
+    navigate("/checkout");
+  };
+  
 
-  // const addOne = (key) => {
-  //   dispatch({
-  //     type: cartActionTypes.INCREASE_CART_QTY,
-  //     payload: key,
-  //   });
-  // };
-
- 
   // const updateQty = (id, newQty) => {
   //   const newItems = items.map((item) => {
   //     if (item.id === id) {
@@ -82,9 +74,9 @@ const ShoppingCart = () => {
               </tr>
             </thead>
             <tbody>
-              {items.cartList.map((item, key) => (
+              {cartList.map((item, key) => (
                 <tr key={key}>
-                  <td>
+                  <td className="each-product">
                     <img src={item.image} alt="img" />
                     {item.title}
                   </td>
@@ -96,7 +88,7 @@ const ShoppingCart = () => {
                       aria-label="Basic example"
                     >
                       <button
-                        onClick={() => decreaseQtyHandler(item,key)}
+                        onClick={() => decreaseQtyHandler(key)}
                         disabled={item.quantity <= 1}
                       >
                         <i className="fas fa-minus"></i>
@@ -104,14 +96,7 @@ const ShoppingCart = () => {
                       <span className="quantity text-center">
                         {item.quantity}
                       </span>
-                      <button
-                        onClick={() =>
-                          dispatch({
-                            type: cartActionTypes.INCREASE_CART_QTY,
-                            payload: key,
-                          })
-                        }
-                      >
+                      <button onClick={() => increaseQtyHandler(key)}>
                         <i className="fas fa-plus"></i>
                       </button>
                     </div>
@@ -122,10 +107,7 @@ const ShoppingCart = () => {
                   <td className="align-middle">
                     <button
                       onClick={() =>
-                        dispatch({
-                          type: cartActionTypes.DELETE_FROM_CART,
-                          payload: key,
-                        })
+                        deleteFromCartHandler(key)
                       }
                     >
                       <i className="fas fa-times"></i>
@@ -156,7 +138,10 @@ const ShoppingCart = () => {
                 <h5>Total</h5>
                 <h5>${Number(totalCart).toLocaleString("en-US")}</h5>
               </div>
-              <button className="btn btn-block checkout-button" onClick={navigateToCheckout}>
+              <button
+                className="btn btn-block checkout-button"
+                onClick={navigateToCheckout}
+              >
                 Proceed To Checkout
               </button>
             </div>

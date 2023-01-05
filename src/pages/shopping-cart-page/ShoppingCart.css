@@ -44,8 +44,19 @@
     border: none;
 }
 .shoppingCart img{
-    width: 50px;
+    width: 30px !important;
+    margin-right: 20px;
 }
 .shoppingCart .checkout-button{
     height: 3.5em;
+}
+.shoppingCart .each-product{
+    display: flex;
+}
+
+@media(max-width:768px){
+    .shoppingCart .each-product{
+        flex-direction: column;
+        align-items: center;
+    }
 }
