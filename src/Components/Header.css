@@ -1,5 +1,11 @@
 .header-container .text-primary {
     color: #D19C97 !important;
+   
+}
+.header-container .h{
+   
+    font-weight: 600 !important;
+
 }
 .header-container .d-block {
   display: block !important;
@@ -54,3 +60,8 @@
     text-align: right !important;
 }
 } 
+@media (max-width: 1200px){
+h, .h {
+    font-size: calc(1.375rem + 1.5vw);
+}
+}

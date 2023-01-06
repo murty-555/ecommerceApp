@@ -9,8 +9,8 @@ const Carosal=()=>{
             <div className="col-3 d-none d-lg-block"></div>
                 <div id="header-carousel" className=" col-12 col-lg-9 carousel slide" data-ride="carousel">
                     <div className="carousel-inner" role="listbox">
-                        <div className="carousel-item active" style={{height: "500px"}}>
-                            <img className="img-fluid" src="https://technext.github.io/eshopper/img/carousel-1.jpg" alt="img"/>
+                        <div className="carousel-item active" style={{height: "410px"}}>
+                            <img className="img-fluid auto" src="https://technext.github.io/eshopper/img/carousel-1.jpg" alt="img"/>
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div className="p-3" style={{maxWidth: "700px"}}>
                                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
@@ -19,7 +19,7 @@ const Carosal=()=>{
                                 </div>
                             </div>
                         </div>
-                        <div className="carousel-item" style={{height: "500px"}}>
+                        <div className="carousel-item" style={{height: "410px"}}>
                             <img className="img-fluid" src="https://technext.github.io/eshopper/img/carousel-2.jpg" alt="img"/>
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div className="p-3" style={{maxWidth: "700px"}}>

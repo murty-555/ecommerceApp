@@ -35,8 +35,8 @@ const Header1=()=>{
                     </div>
                 </nav>
             </div>
-            <div className="col-lg-9">
-                <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+            <div className="col-lg-9 mt-2">
+                <nav className="navbar navbar-expand-lg  navbar-light py-3 py-lg-0 px-0">
                     
                     <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
