@@ -19,7 +19,7 @@ function QuickLinks() {
         </Link>
         <Link
           className="mb-2 text-hover text-decoration-none text-dark"
-          to="/shopDetail"
+          to="/shop/1"
         >
           <i className="fa fa-angle-right mr-2"></i>
           Shop Detail
