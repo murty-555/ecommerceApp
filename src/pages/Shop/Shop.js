@@ -27,10 +27,8 @@ const Shop = () => {
   }
 
   return (
-    <div>
-      <div class="container-fluid mb-5" style={{ backgroundColor: "#edf1ff" }}>
-        <PageHeader headerName={"Our Shop"} />
-      </div>
+    <div style={{backgroundColor:"#eaeded"}}>
+      <PageHeader headerName={"Our Shop"} />
       <div class="container-fluid pt-5">
         <div class="row px-xl-5">
           <div class="col-lg-3 col-md-12">

@@ -1,12 +1,12 @@
-.back-to-top-container .btn-primary{
+/* .back-to-top-container .btn-primary{
     display: block;
     width: 100%;
     color: #212529;
-    background-color: #d19197;
-}
+    background-color: lightsteelblue;
+} */
 .back-to-top-container .btn-primary:hover{
     color: white;
-    background-color: #d3838b;
+    background-color: lightsteelblue;
 }
 .back-to-top-container .back-to-top{
     position: fixed;
@@ -19,6 +19,9 @@
     height: 40px;
     animation: action 1s infinite alternate;
     border-radius: 0;
+    display: block;
+    background-color: lightsteelblue;
+
   }
 
   @keyframes action {

@@ -12,7 +12,7 @@ export default function Checkout() {
   });
 
   return (
-    <div>
+    <div style={{backgroundColor:"#eaeded"}}>
       <PageHeader headerName={"Check Out"} />
       <div className="container-fluid  pt-5">
         <div className="row px-xl-5">

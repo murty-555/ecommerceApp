@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./Components/Header";
+import Header from "./Components/HeaderSection/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 import Home from "./pages/HomePage/Home";
 import Shop from './pages/Shop/Shop';
 import ShoppingCart from './pages/shopping-cart-page/ShoppingCart';

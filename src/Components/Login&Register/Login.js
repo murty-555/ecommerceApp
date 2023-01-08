@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useDispatch } from "react-redux";
-import imageForLogin from "./Images/login-page-image-svg.svg";
-import loginUser from "../actions/loginAction";
+import imageForLogin from "../Images/login-page-image-svg.svg";
+import loginUser from "../../actions/loginAction";
 
 function Login({ nameOfClass }) {
   const dispatch = useDispatch();

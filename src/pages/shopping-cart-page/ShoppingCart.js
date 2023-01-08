@@ -59,7 +59,7 @@ const ShoppingCart = () => {
   //   0
   // );
   return (
-    <div className="shoppingCart">
+    <div style={{backgroundColor:"#eaeded"}} className="shoppingCart">
       <PageHeader headerName={"Shopping Cart"} />
       <div className="row container-fluid body mx-0 px-xl-5 pt-5">
         <div className="col-12 col-lg-8 table-container text-center mb-5">

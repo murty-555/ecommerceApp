@@ -1,6 +1,6 @@
 import React from "react";
 import "./Register.css";
-import imageForRegister from "./Images/register-page-image-svg.svg";
+import imageForRegister from "../Images/register-page-image-svg.svg";
 
 function Register({ nameOfClass }) {
   return (

@@ -1,11 +1,11 @@
 .footer-container{
-    background-color: #edf1ff;
-    /* color: #d19c97; */
+    background-color:#37475a;
+    color: white;
 }
 
-.footer-container .text-primary{
+/* .footer-container .text-primary{
     color: #d19c97 !important;
-}
+} */
 
 .footer-container .logo-border{
     border: 2px solid white !important;
@@ -27,8 +27,8 @@
 .footer-container .btn-primary{
     display: block;
     width: 100%;
-    color: #212529;
-    background-color: #d19197;
+    color: white !important;
+    background-color: black !important;
 }
 .footer-container .btn-primary:hover{
     color: white;
@@ -54,7 +54,7 @@
 }
 
 .footer-container .address-icons{
-    color: #d19197 !important;
+    color: #ffffff !important;
 }
 
 .footer-container .text-hover:hover{
@@ -63,6 +63,10 @@
 
 .footer-container .distributor{
     color: #d19197 !important;
+}
+
+.botom-bg-color{
+    background-color: black !important;
 }
 /* i{
     color: #d19197 !important;

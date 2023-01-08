@@ -6,12 +6,12 @@ import Car from "./Car";
 import PageHeader from "../../Components/page-header/PageHeader";
 const ShopDetail = () => {
   return (
-    <>
+    <div style={{backgroundColor:"#eaeded"}}>
       <PageHeader headerName={"Shop Detail"}/>
       <Style />
       <TabSection />
       <Car />
-    </>
+    </div>
   );
 };
 

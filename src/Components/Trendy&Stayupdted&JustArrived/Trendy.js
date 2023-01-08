@@ -91,7 +91,7 @@ export default function Trendy() {
         <div className="container-fluid bg-secondary backcolor my-5">
         <div className="row justify-content-md-center py-5 px-xl-5">
             <div className="col-md-6 col-12 py-5">
-                <div className="text-center mb-2 pb-2">
+                <div className="text-center text-light mb-2 pb-2">
                 <div className='container-fluid pt-5'>
                 <h2 className="decorated"><span>Stay Updated</span></h2></div>
                     <p>Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at justo ipsum eirmod duo labore labore.</p>
@@ -100,7 +100,7 @@ export default function Trendy() {
                     <div className="input-group">
                         <input type="text" className="form-control border-white p-4" placeholder="Email Goes Here"/>
                         <div className="input-group-append">
-                            <button className="btn but btn-primary px-4">Subscribe</button>
+                            <button className="btn but btn-dark bg-dark px-4">Subscribe</button>
                         </div>
                     </div>
                 </form>

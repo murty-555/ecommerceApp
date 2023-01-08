@@ -1,3 +1,10 @@
 .logo-border{
     border: 2px solid white !important;
+    color: lightsteelblue !important;
 }
+.text-color{
+    color: lightsteelblue !important; 
+}
+/* .text-color{
+    color: lightsteelblue !important;
+} */

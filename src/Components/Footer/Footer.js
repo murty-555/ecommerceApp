@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "../ui/Logo";
+import Logo from "../../ui/Logo";
 import BackToTop from "./BackToTop";
 import "./Footer.css";
-import image from "./Images/payments.png";
+import image from "../Images/payments.png";
 import QuickLinks from "./QuickLinks";
 
 function Footer() {
@@ -10,12 +10,12 @@ function Footer() {
     <>
       <BackToTop />
       <div className="container-fluid footer-container">
-        <div className="px-xl-5 mt-5">
+        <div className="px-xl-5">
           <div className="row pt-5">
             <div className="col-lg-4 col-md-12 pr-3 pr-xl-5 mb-5">
               {/* <a className="text-decoration-none" href="/">
                 <h1 className="display-6 mb-4 text-dark">
-                  <span className="text-primary font-weight-bold logo-border px-3 mr-1">
+                  <span className=" font-weight-bold logo-border px-3 mr-1">
                     E
                   </span>{" "}
                   Shopper
@@ -79,18 +79,19 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="row border-top border-white pt-3">
+          </div>
+          <div className="row border-top border-white botom-bg-color pt-3 px-xl-5 mt-5 pb-3">
             <div className="col-md-6 text-md-left text-center px-xl-0">
               <p className="mb-md-0">
                 <a
-                  className="text-hover font-weight-semi-bold text-decoration-none text-dark"
+                  className="text-hover font-weight-semi-bold text-decoration-none text-dark distributor"
                   href="/"
                 >
                   &copy; Your Site Name.{" "}
                 </a>
                 All Rights Reserved. Designed by{" "}
                 <a
-                  className="text-hover font-weight-semi-bold text-decoration-none text-dark"
+                  className="text-hover font-weight-semi-bold text-decoration-none text-light"
                   href="/"
                 >
                   HTML Codex
@@ -110,7 +111,6 @@ function Footer() {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }

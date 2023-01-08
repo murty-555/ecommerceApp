@@ -1,15 +1,16 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 function Logo() {
   return (
-    <a className="text-decoration-none" href="/">
-      <h1 className="display-6 mb-4 text-dark">
-        <span className="text-primary font-weight-bold logo-border px-3 mr-1">
+    <Link className="text-decoration-none text-light" to="/">
+      <h1 className="display-6 mb-4">
+        <span style={{color:"lightsteelblue"}} className="font-weight-bold logo-border px-3 mr-1">
           E
         </span>{" "}
         Shopper
       </h1>
-    </a>
+    </Link>
   );
 }
 

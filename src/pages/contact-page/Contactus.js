@@ -4,7 +4,7 @@ import "./Contactus.css";
 
 const Contactus = () => {
   return (
-    <div className="contact-us-page">
+    <div style={{backgroundColor:"#eaeded"}} className="contact-us-page">
       <PageHeader headerName={"Contact Us"}/>
       <div className="container-fluid pt-5 pb-5">
         <h2 className="decorated">

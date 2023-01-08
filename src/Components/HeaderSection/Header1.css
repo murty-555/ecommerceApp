@@ -19,7 +19,7 @@
     color: black !important;
 }
 .header1-container .nav-link:hover{
-    color: #D19C97 !important;
+    color:lightsteelblue !important;
 }
 .header1-container .bg-clr:visited{
     background-color: #D19C97 !important;
@@ -27,3 +27,7 @@
 .header1-container .categerious:hover {
     color:black;
 }
+
+/* .header1-container{
+    background-color: lightsteelblue;
+} */

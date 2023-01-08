@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .small-container{
-    background-color: #edf1ff;
+    background-color: #37475a;
     font-family: poppins;
     margin-bottom: 20px;
 }
@@ -24,20 +24,20 @@
 
 .button{
     text-decoration: none;
-    color: #D19C97;
-    border: 1px solid  #D19C97;
+    color: lightsteelblue;
+    border: 1px solid  lightsteelblue;
     padding: 8px 15px;
     font-size: 18px;
     transition: all 0.3s;
 }
 
 .button:hover{
-    background-color: #D19C97;
+    background-color: lightsteelblue;
     color: black;
 }
 
 .offer{
-    color: #D19C97;
+    color: lightsteelblue;
     font-size: 20px;
 }
 .card-heading{
