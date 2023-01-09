@@ -12,7 +12,7 @@ const card = () => {
     <div className='container-fluid'>
       <div className='row px-xl-5 pb-3'>
       <div className='container col-lg-3 col-md-6 col-sm-12 pb-1 '>
-        <div className='d-flex align-items-center border border-dark mb-4'>
+        <div className='d-flex align-items-center justify-content-center border border-dark'>
         <div style={{backgroundColor:"white",padding:"10px 10px",display:"flex", alignItems:"center", margin:"20px" }}>
         <CheckIcon style={{color:"#D19C97",width:"58px",height:'40px'}}/>
         <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>
@@ -23,7 +23,7 @@ const card = () => {
       </div>
 
       <div className='container col-lg-3 col-md-6 col-sm-12 '>
-      <div className='d-flex align-items-center border mb-4'>
+      <div className='d-flex align-items-center justify-content-center border'>
       <div style={{backgroundColor:"white",padding:"10px 10px",display:"flex", alignItems:"center", margin:"20px"}}>
         <LocalShippingIcon style={{color:"#D19C97",width:"58px",height:'40px'}}/>
         <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>
@@ -34,7 +34,7 @@ const card = () => {
       </div>
 
       <div className='container col-lg-3 col-md-6 col-sm-12  '>
-      <div className='d-flex align-items-center border mb-4'>
+      <div className='d-flex align-items-center justify-content-center border'>
         <div style={{backgroundColor:"white", padding:"10px 10px",display:"flex", alignItems:"center",margin:"20px"}}>
         <SwapHorizIcon style={{color:"#D19C97",width:"58px",height:'40px'}}/>
         <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>
@@ -45,7 +45,7 @@ const card = () => {
       </div>
 
       <div className='container col-lg-3 col-md-6 col-sm-12'>
-      <div className='d-flex align-items-center border mb-4'>
+      <div className='d-flex align-items-center justify-content-center border'>
         <div style={{backgroundColor:"white", padding:"10px 10px",display:"flex", alignItems:"center",margin:"20px"}}>
         <WifiCalling3Icon style={{color:"#D19C97",width:"58px",height:'40px'}}/>
         <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>

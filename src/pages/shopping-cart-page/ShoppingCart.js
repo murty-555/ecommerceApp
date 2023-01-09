@@ -4,6 +4,7 @@ import PageHeader from "../../Components/page-header/PageHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { cartActionTypes } from "../../actions/actionTypes/cartActionTypes";
+import EmptyCart from "./EmptyCart";
 
 const ShoppingCart = () => {
   const dispatch = useDispatch();
@@ -62,7 +63,12 @@ const ShoppingCart = () => {
     <div style={{backgroundColor:"#eaeded"}} className="shoppingCart">
       <PageHeader headerName={"Shopping Cart"} />
       <div className="row container-fluid body mx-0 px-xl-5 pt-5">
-        <div className="col-12 col-lg-8 table-container text-center mb-5">
+        {cartList.length  === 0 && <div className="col-12 col-lg-8 table-container  empty-cart text-center mb-5">
+        <div className="d-block">
+          <EmptyCart/>
+          </div>
+        </div>}
+        {cartList.length  !== 0 && <div className="col-12 col-lg-8 table-container text-center mb-5">
           <table className="table table-bordered mb-0">
             <thead className="table-head text-dark">
               <tr>
@@ -73,7 +79,7 @@ const ShoppingCart = () => {
                 <th>Remove</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="table-body">
               {cartList.map((item, key) => (
                 <tr key={key}>
                   <td className="each-product">
@@ -88,6 +94,7 @@ const ShoppingCart = () => {
                       aria-label="Basic example"
                     >
                       <button
+                      className={item.quantity <= 1 ? "decrease-qty" : "idr-buttons"}
                         onClick={() => decreaseQtyHandler(key)}
                         disabled={item.quantity <= 1}
                       >
@@ -96,7 +103,7 @@ const ShoppingCart = () => {
                       <span className="quantity text-center">
                         {item.quantity}
                       </span>
-                      <button onClick={() => increaseQtyHandler(key)}>
+                      <button className="idr-buttons" onClick={() => increaseQtyHandler(key)}>
                         <i className="fas fa-plus"></i>
                       </button>
                     </div>
@@ -106,6 +113,7 @@ const ShoppingCart = () => {
                   </td>
                   <td className="align-middle">
                     <button
+                      className="idr-buttons remove-item-button"
                       onClick={() =>
                         deleteFromCartHandler(key)
                       }
@@ -117,7 +125,7 @@ const ShoppingCart = () => {
               ))}
             </tbody>
           </table>
-        </div>
+        </div>}
         <div className="col-12 col-lg-4 mb-5">
           <div className="card ">
             <div className="card-header">
