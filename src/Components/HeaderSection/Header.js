@@ -19,28 +19,28 @@ const Header=()=>{
         <div className="row  py-2 px-xl-5" style={{backgroundColor:"#232F3E"}}>
             <div className="col-lg-6 d-none d-lg-block" >
                 <div className="d-inline-flex align-items-center" style={{'text-decoration':"none"}}>
-                    <a className="text-light " href="/">FAQs</a>
+                    <a className="text-light " href="https://reactjs.org/docs/faq-functions.html" target="_blank">FAQs</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-light" href="/">Help</a>
+                    <a className="text-light" href="https://reactjs.org/docs/faq-functions.html" target="_blank">Help</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-light" href="/">Support</a>
+                    <a className="text-light" href="https://reactjs.org/docs/faq-functions.html" target="_blank">Support</a>
                 </div>
             </div>
             <div className="col-lg-6  text-lg-right">
                 <div className="d-inline-flex align-items-center">
-                    <a className="text-light px-2" href="/">
+                    <a className="text-light px-2" href="https://www.facebook.com/Amazon/" target="_blank">
                         <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a className="text-light px-2" href="/">
+                    <a className="text-light px-2" href="https://twitter.com/Amazon/" target="_blank">
                         <i className="fab fa-twitter"></i>
                     </a>
-                    <a className="text-light px-2" href="/">
+                    <a className="text-light px-2" href="https://in.linkedin.com/company/amazon" target="_blank">
                         <i className="fab fa-linkedin-in"></i>
                     </a>
-                    <a className="text-light px-2" href="/">
+                    <a className="text-light px-2" href="https://www.instagram.com/amazon/?hl=en" target="_blank">
                         <i className="fab fa-instagram"></i>
                     </a>
-                    <a className="text-light pl-2" href="/">
+                    <a className="text-light pl-2"href="https://www.youtube.com/user/amazon" target="_blank">
                         <i className="fab fa-youtube"></i>
                     </a>
                 </div>
