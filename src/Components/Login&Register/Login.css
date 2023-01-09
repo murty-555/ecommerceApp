@@ -14,7 +14,7 @@
 
 .login-page-icon{
     font-size: 48px;
-    color: #d19c97;
+    color: #37475a;
 }
 .login-page-form{
     display: flex;
@@ -22,7 +22,11 @@
 
 }
 .login-popup-page .login-button{
-    background-color: #d19c97;
+    background-color: #131A22;
+}
+.login-popup-page .login-button:hover{
+    color: #ffffff;
+    background-color: #131A22;
 }
 .login-button-container{
     text-align: center !important;
@@ -47,5 +51,5 @@
 }
 
 .login-page-form-container .input:focus {
-border: 2px solid #d19c97;
+border: 2px solid #37475a;
 }

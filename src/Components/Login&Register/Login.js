@@ -93,7 +93,7 @@ function Login({ nameOfClass }) {
                       <button
                         type="button"
                         onClick={loginHandler}
-                        className="btn btn-primary login-button"
+                        className="btn login-button"
                       >
                         Login
                       </button>

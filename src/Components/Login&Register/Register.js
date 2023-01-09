@@ -96,7 +96,7 @@ function Register({ nameOfClass }) {
                     <div className="text-center register-button-container">
                       <button
                         type="button"
-                        className="btn btn-primary register-button"
+                        className="btn register-button"
                       >
                         Register
                       </button>
