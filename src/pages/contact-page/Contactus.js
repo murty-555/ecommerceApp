@@ -63,7 +63,7 @@ const Contactus = () => {
               </div>
               <div>
                 <button
-                  className="btn btn-primary py-2 px-4"
+                  className="btn py-2 px-4"
                   type="submit"
                   id="sendMessageButton"
                 >

@@ -24,15 +24,14 @@
     border-radius: 0;
 }
 
-.footer-container .btn-primary{
+.footer-container button{
     display: block;
     width: 100%;
-    color: white !important;
-    background-color: black !important;
+    background-color: #131A22;
 }
-.footer-container .btn-primary:hover{
+.footer-container button:hover{
     color: white;
-    background-color: #d3838b;
+    background-color: #131A22;
 }
 
 .footer-container .text-md-right{
@@ -62,11 +61,11 @@
 }
 
 .footer-container .distributor{
-    color: #d19197 !important;
+    color: lightsteelblue !important;
 }
 
 .botom-bg-color{
-    background-color: black !important;
+    background-color: #131A22;
 }
 /* i{
     color: #d19197 !important;

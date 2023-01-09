@@ -15,7 +15,7 @@
 
 .register-page-icon{
     font-size: 48px;
-    color: #d19c97;
+    color: #37475a;
 }
 .register-page-form{
     display: flex;
@@ -23,7 +23,14 @@
 
 }
 .register-popup-page .register-button{
-    background-color: #d19c97;
+    background-color: #131A22;
+}
+.register-popup-page .register-button:hover{
+    color: #ffffff;
+    background-color: #131A22;
+}
+.register-popup-page .register-button{
+    background-color: #131A22;
 }
 .register-button-container{
     text-align: center !important;
@@ -48,6 +55,6 @@
 }
 
 .register-page-form-container .input:focus {
-  border: 2px solid #d19c97;
+  border: 2px solid #37475a;
 }
  

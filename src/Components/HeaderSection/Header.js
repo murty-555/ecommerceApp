@@ -65,13 +65,13 @@ const Header=()=>{
                 </form>
             </div>
             <div className="col-lg-3 col-6 text-right">
-                <a href="/" className="btn border m-2">
+                {/* <a href="/" className="btn border m-2">
                     <i className="fas fa-heart text-light"></i>
                     <span className="badge text-light">0</span>
-                </a>
+                </a> */}
                 <Link to='/shoppingCart' className="btn border">
                     <i className="fas fa-shopping-cart text-light"></i>
-                    <span className="badge text-light">{cart_count}</span>
+                    <span className="badge text-light cart-count">{cart_count}</span>
                 </Link>
             </div>
         </div>

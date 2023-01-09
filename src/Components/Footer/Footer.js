@@ -13,14 +13,6 @@ function Footer() {
         <div className="px-xl-5">
           <div className="row pt-5">
             <div className="col-lg-4 col-md-12 pr-3 pr-xl-5 mb-5">
-              {/* <a className="text-decoration-none" href="/">
-                <h1 className="display-6 mb-4 text-dark">
-                  <span className=" font-weight-bold logo-border px-3 mr-1">
-                    E
-                  </span>{" "}
-                  Shopper
-                </h1>
-              </a> */}
               <Logo/>
               <p>
                 Dolore erat dolor sit lorem vero amet. Sed sit lorem magna,
@@ -68,7 +60,7 @@ function Footer() {
                     </div>
                     <div>
                       <button
-                        className="btn btn-primary border-0 py-3 btn-block"
+                        className="btn border-0 py-3 btn-block"
                         type="submit"
                       >
                         Subscribe Now

@@ -23,7 +23,7 @@ const card = () => {
       </div>
 
       <div className='container col-lg-3 col-md-6 col-sm-12 '>
-      <div className='d-flex align-items-center border mb-4'>
+      <div className='d-flex align-items-center justify-content-center border'>
       <div style={{backgroundColor:"white",padding:"10px 10px",display:"flex", alignItems:"center", margin:"20px"}}>
         <LocalShippingIcon style={{color:"lightsteelblue",width:"58px",height:'40px'}}/>
         <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>
@@ -34,7 +34,7 @@ const card = () => {
       </div>
 
       <div className='container col-lg-3 col-md-6 col-sm-12  '>
-      <div className='d-flex align-items-center border mb-4'>
+      <div className='d-flex align-items-center justify-content-center border'>
         <div style={{backgroundColor:"white", padding:"10px 10px",display:"flex", alignItems:"center",margin:"20px"}}>
         <SwapHorizIcon style={{color:"lightsteelblue",width:"58px",height:'40px'}}/>
         <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>
@@ -45,7 +45,7 @@ const card = () => {
       </div>
 
       <div className='container col-lg-3 col-md-6 col-sm-12'>
-      <div className='d-flex align-items-center border mb-4'>
+      <div className='d-flex align-items-center justify-content-center border'>
         <div style={{backgroundColor:"white", padding:"10px 10px",display:"flex", alignItems:"center",margin:"20px"}}>
         <WifiCalling3Icon style={{color:"lightsteelblue",width:"58px",height:'40px'}}/>
         <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>
