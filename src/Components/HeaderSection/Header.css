@@ -50,6 +50,9 @@
 .header-container .text-light{
     text-decoration: none;
 }
+.header-container .text-light:hover{
+    text-decoration: underline;
+}
 .header-container .text-lg-right{
     text-align: center;
 

@@ -47,7 +47,7 @@ const Shop = () => {
                       />
                       <div class="input-group-append">
                         <span class="input-group-text bg-transparent text-primary">
-                          <i class="fa fa-search"></i>
+                          <i class="fa fa-search text-dark"></i>
                         </span>
                       </div>
                     </div>
