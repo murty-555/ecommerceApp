@@ -18,7 +18,7 @@ const Header=()=>{
         <div className="container-fluid header-container" >
         <div className="row  py-2 px-xl-5" style={{backgroundColor:"#232F3E"}}>
             <div className="col-lg-6 d-none d-lg-block" >
-                <div className="d-inline-flex align-items-center">
+                <div className="d-inline-flex align-items-center" style={{'text-decoration':"none"}}>
                     <a className="text-light " href="/">FAQs</a>
                     <span className="text-muted px-2">|</span>
                     <a className="text-light" href="/">Help</a>
