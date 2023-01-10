@@ -27,30 +27,18 @@ const Style = () => {
 
   const increaseOne = () => {
     setCount((count) => count + 1);
-  };
+  }
 
   const decreaseOne = () => {
-<<<<<<< HEAD
     setCount((count) => count - 1);
-  };
-
-=======
-    setCount(count => count - 1)
   }
-  console.log(count)
-  console.log(product)
->>>>>>> 87075c46ff5a7e442c3d27332299baca0b5c6804
+
   const addToCartHandler = (product) => {
     dispatch({
       type: cartActionTypes.ADD_TO_CART,
       payload: { ...product, quantity: count },
     });
-<<<<<<< HEAD
   };
-=======
-
-  }
->>>>>>> 87075c46ff5a7e442c3d27332299baca0b5c6804
 
   useEffect(() => {
     dispatch(fetchShopDetails(id));
