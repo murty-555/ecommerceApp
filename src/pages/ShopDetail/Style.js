@@ -32,12 +32,14 @@ const Style = () => {
   const decreaseOne = () => {
     setCount(count => count - 1)
   }
-
+  console.log(count)
+  console.log(product)
   const addToCartHandler = (product) => {
     dispatch({
       type: cartActionTypes.ADD_TO_CART,
       payload: {...product,quantity: count},
     });
+
   }
 
   useEffect(() => {
