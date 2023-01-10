@@ -17,7 +17,7 @@
     display: block;
   }
   .tab-text {
-    color: #37475a;
+    color: midnightblue;
     font-size: 12px;
     font-family: Poppins, sans-serif;
   }
@@ -148,8 +148,9 @@
   .review-button {
     height: 40px;
     border: none;
-    background-color: #d19c97;
+    background-color: #131a22;
     width: 180px;
+    color: #ffffff;
   }
   
   .review-button:hover {
