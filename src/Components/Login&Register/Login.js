@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import "./Login.css";
 import { useDispatch } from "react-redux";
 import imageForLogin from "../Images/login-page-image-svg.svg";
@@ -6,11 +7,21 @@ import loginUser from "../../actions/loginAction";
 
 function Login({ nameOfClass }) {
   const dispatch = useDispatch();
+  let navigate = useNavigate();
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const loginHandler = () => {
-    dispatch(loginUser(userName, password));
+  const [flag, setFlag] = useState(false);
+  const loginHandler = (e) => {
+    e.preventDefault();
+    if (!userName || !password) {
+      setFlag(true);
+    } else {
+      setFlag(false);
+      dispatch(loginUser(userName, password));
+      navigate('/')
+    }
   };
+  console.log(flag);
   return (
     <>
       <span
@@ -62,7 +73,7 @@ function Login({ nameOfClass }) {
                     <i className="fas fa-user-circle login-page-icon mb-2"></i>
                     <p>Please enter your details to login</p>
                   </div>
-                  <form className="login-page-form">
+                  <form className="login-page-form" onSubmit={loginHandler}>
                     <div className="inputs">
                       {/* <label htmlFor="username" className="input-label">username</label> */}
                       <input
@@ -89,10 +100,10 @@ function Login({ nameOfClass }) {
                         placeholder="password"
                       />
                     </div>
+                    {flag && <p className="text-danger">Please enter valid credentials</p>}
                     <div className="text-center login-button-container">
                       <button
-                        type="button"
-                        onClick={loginHandler}
+                        type="submit"
                         className="btn login-button"
                       >
                         Login

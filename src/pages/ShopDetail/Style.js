@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { DynamicStar } from 'react-dynamic-star';
+import { DynamicStar } from "react-dynamic-star";
 import "./Style.css";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -23,49 +23,27 @@ const Style = () => {
   }));
   const dispatch = useDispatch();
   const { id } = useParams();
-  const [count,setCount] = useState(1);
+  const [count, setCount] = useState(1);
 
   const increaseOne = () => {
-    setCount(count => count + 1)
-  }
+    setCount((count) => count + 1);
+  };
 
   const decreaseOne = () => {
-    setCount(count => count - 1)
-  }
+    setCount((count) => count - 1);
+  };
 
   const addToCartHandler = (product) => {
     dispatch({
       type: cartActionTypes.ADD_TO_CART,
-      payload: {...product,quantity: count},
+      payload: { ...product, quantity: count },
     });
-  }
+  };
 
   useEffect(() => {
     dispatch(fetchShopDetails(id));
   }, [dispatch, id]);
 
-
-
-  // const addOne = (key) => {
-  //   dispatch({
-  //     type: cartActionTypes.INCREASE_CART_QTY,
-  //     payload: key
-  //   })
-  // }
-
-  // const decreaseQtyHandler = (item, key) => {
-  //   if (item.quantity === 1) {
-  //     dispatch({
-  //       type: cartActionTypes.DELETE_FROM_CART,
-  //       payload: key,
-  //     });
-  //   } else {
-  //     dispatch({
-  //       type: cartActionTypes.DECREASE_CART_QTY,
-  //       payload: key,
-  //     });
-  //   }
-  // };
 
   return (
     <div className="container-fluid d-flex">
@@ -86,7 +64,7 @@ const Style = () => {
               <h3>{product.title}</h3>
               <div className="d-flex align-items-center">
                 <DynamicStar
-                  rating={product.rating.rate}
+                  rating={product.rating !== undefined && product.rating.rate}
                   width={20}
                   height={20}
                   totalStars={5}
@@ -95,12 +73,13 @@ const Style = () => {
                   fullStarColor={"#ff9900"}
                   emptyStarColor={"transparent"}
                 />
-                <p className="text mt-3 text-dark ml-2">({product.rating.count} Reviews)</p>
+                <p className="text mt-3 text-dark ml-2">
+                  ({product.rating !== undefined && product.rating.count}{" "}
+                  Reviews)
+                </p>
               </div>
               <h3 style={{ marginBottom: "20px" }}> ${product.price}.00</h3>
-              <p className="text">
-                {product.description}
-              </p>
+              <p className="text">{product.description}</p>
               <div className="d-flex">
                 <h5 style={{ paddingTop: "7px", paddingRight: "10px" }}>
                   Sizes:
@@ -207,9 +186,7 @@ const Style = () => {
                   >
                     <i className="fas fa-minus"></i>
                   </button>
-                  <span className="quantity_er text-center">
-                    {count}
-                  </span>
+                  <span className="quantity_er text-center">{count}</span>
                   <button
                     onClick={increaseOne}
                     className="button_PM idr-buttons"
@@ -221,7 +198,7 @@ const Style = () => {
                   <button
                     className="cart_color"
                     onClick={() => {
-                      addToCartHandler(product)
+                      addToCartHandler(product);
                     }}
                     style={{
                       borderStyle: "solid",
