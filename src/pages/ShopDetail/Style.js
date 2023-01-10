@@ -1,8 +1,6 @@
 import React, { useState } from "react";
+import { DynamicStar } from 'react-dynamic-star';
 import "./Style.css";
-import StarIcon from "@mui/icons-material/Star";
-import StarHalfIcon from "@mui/icons-material/StarHalf";
-import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -86,13 +84,18 @@ const Style = () => {
           <div className="col-lg-8 ">
             <div style={{ marginLeft: "70px", marginTop: "50px" }}>
               <h3>{product.title}</h3>
-              <div className="d-flex">
-                <StarIcon style={{ color: "#ff9900" }} />
-                <StarIcon style={{ color: "#ff9900" }} />
-                <StarIcon style={{ color: "#ff9900" }} />
-                <StarHalfIcon style={{ color: "#ff9900" }} />
-                <StarOutlineIcon style={{ color: "#ff9900" }} />
-                <p className="text">(50 Reviews)</p>
+              <div className="d-flex align-items-center">
+                <DynamicStar
+                  rating={product.rating.rate}
+                  width={20}
+                  height={20}
+                  totalStars={5}
+                  outlined={true}
+                  outlinedColor={""}
+                  fullStarColor={"#ff9900"}
+                  emptyStarColor={"transparent"}
+                />
+                <p className="text mt-3 text-dark ml-2">({product.rating.count} Reviews)</p>
               </div>
               <h3 style={{ marginBottom: "20px" }}> ${product.price}.00</h3>
               <p className="text">
