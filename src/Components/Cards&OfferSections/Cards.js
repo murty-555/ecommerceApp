@@ -12,7 +12,7 @@ const card = () => {
     <div className='container-fluid'>
       <div className='row px-xl-5 pb-3'>
       <div className='container col-lg-3 col-md-6 col-sm-12 pb-1 '>
-        <div className='d-flex align-items-center border mb-4'>
+        <div className='d-flex align-items-center justify-content-center border mb-4'>
         <div style={{backgroundColor:"white",padding:"10px 10px",display:"flex", alignItems:"center", margin:"20px" }}>
         <CheckIcon style={{color:"steelblue",width:"58px",height:'40px'}}/>
         <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>

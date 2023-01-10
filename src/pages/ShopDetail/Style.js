@@ -9,10 +9,10 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 // import Quantity from "./Quantity";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import PinterestIcon from "@mui/icons-material/Pinterest";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import TwitterIcon from "@mui/icons-material/Twitter";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import PinterestIcon from "@mui/icons-material/Pinterest";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -87,11 +87,11 @@ const Style = () => {
             <div style={{ marginLeft: "70px", marginTop: "50px" }}>
               <h3>{product.title}</h3>
               <div className="d-flex">
-                <StarIcon style={{ color: "#D19C97" }} />
-                <StarIcon style={{ color: "#D19C97" }} />
-                <StarIcon style={{ color: "#D19C97" }} />
-                <StarHalfIcon style={{ color: "#D19C97" }} />
-                <StarOutlineIcon style={{ color: "#D19C97" }} />
+                <StarIcon style={{ color: "#ff9900" }} />
+                <StarIcon style={{ color: "#ff9900" }} />
+                <StarIcon style={{ color: "#ff9900" }} />
+                <StarHalfIcon style={{ color: "#ff9900" }} />
+                <StarOutlineIcon style={{ color: "#ff9900" }} />
                 <p className="text">(50 Reviews)</p>
               </div>
               <h3 style={{ marginBottom: "20px" }}> ${product.price}.00</h3>
@@ -112,31 +112,31 @@ const Style = () => {
                     >
                       <FormControlLabel
                         value="XS"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="XS"
                         labelPlacement="end"
                       />
                       <FormControlLabel
                         value="S"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="S"
                         labelPlacement="end"
                       />
                       <FormControlLabel
                         value="M"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="M"
                         labelPlacement="end"
                       />
                       <FormControlLabel
                         value="L"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="L"
                         labelPlacement="end"
                       />
                       <FormControlLabel
                         value="XL"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="XL"
                         labelPlacement="end"
                       />
@@ -159,31 +159,31 @@ const Style = () => {
                     >
                       <FormControlLabel
                         value="Black"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="Black"
                         labelPlacement="end"
                       />
                       <FormControlLabel
                         value="White"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="White"
                         labelPlacement="end"
                       />
                       <FormControlLabel
                         value="Red"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="Red"
                         labelPlacement="end"
                       />
                       <FormControlLabel
                         value="Blue"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="Blue"
                         labelPlacement="end"
                       />
                       <FormControlLabel
                         value="Green"
-                        control={<Radio style={{ color: "#D19C97" }} />}
+                        control={<Radio style={{ color: "midnightblue" }} />}
                         label="Green"
                         labelPlacement="end"
                       />
@@ -199,7 +199,7 @@ const Style = () => {
                 >
                   <button
                     onClick={decreaseOne}
-                    className="button_PM"
+                    className="idr-buttons decrease-qty"
                     disabled={count <= 1}
                   >
                     <i className="fas fa-minus"></i>
@@ -209,7 +209,7 @@ const Style = () => {
                   </span>
                   <button
                     onClick={increaseOne}
-                    className="button_PM"
+                    className="button_PM idr-buttons"
                   >
                     <i className="fas fa-plus"></i>
                   </button>
@@ -230,13 +230,13 @@ const Style = () => {
                   </button>
                 </div>
               </div>
-              <div className="d-flex" style={{ paddingTop: "20px" }}>
+              {/* <div className="d-flex" style={{ paddingTop: "20px" }}>
                 <h5 style={{ paddingRight: "20px" }}>Share on:</h5>
                 <FacebookIcon style={{ marginRight: "10px" }} />
                 <TwitterIcon style={{ marginRight: "10px" }} />
                 <LinkedInIcon style={{ marginRight: "10px" }} />
                 <PinterestIcon style={{ marginRight: "10px" }} />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

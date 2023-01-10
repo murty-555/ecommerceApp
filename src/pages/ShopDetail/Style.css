@@ -1,14 +1,14 @@
 /* .over{
     overflow-x: auto;
 } */
-.button_PM{
+/* .button_PM{
     background-color: #d19c97;
     border-radius: 0px;
-}
-.button_PM:hover{
+} */
+/* .button_PM:hover{
     background-color: #c5837c;
     color: #ffffff;
-}
+} */
 .quantity_er{
     background-color: #edf1ff;
 }
@@ -40,13 +40,14 @@
     font-family:sans-serif;
 }
 .cart_color{
-    background-color: #d19c97;
-    margin-left:15px;
+    background-color: #131A22;
+    color: #ffffff;
+    margin-left: 20px;
 }
 
 .cart_color:hover{
-    background-color: #c5837c;
-    color: #ffffff;
+    background-color: #131A22;
+   
 }
 button, input {
     overflow: visible;
@@ -54,6 +55,20 @@ button, input {
 .carousel-dark .carousel-indicators [data-bs-target] {
     background-color:transparent !important;
 }
+
+.decrease-qty{
+    background-color: #a1a1a1;
+}
+
+.idr-buttons{
+    color: #ffffff;
+    background-color: #131A22;
+    border-radius: 0px !important;
+}
+.radio-btns{
+    color: midnightblue;
+}
+
 /* .car{
     min-width:500px;
     margin-left: 5px;

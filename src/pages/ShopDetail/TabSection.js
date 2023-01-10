@@ -18,7 +18,7 @@ const TabSection = () => {
         <Nav variant="tabs">
           <Nav.Item>
             <Nav.Link
-              className="tab-text"
+              className="tab-text text-dark"
               eventKey="link-1"
               onClick={() => tabHandler(1)}
             >
