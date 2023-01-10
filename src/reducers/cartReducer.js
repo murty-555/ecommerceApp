@@ -13,7 +13,7 @@ const cartReducer = (state=initialState,action) => {
             if(state.cart_count === 0){
                 let cart = {
                     id: action.payload.id,
-                    quantity: action.payload.quantity,
+                    quantity:1,
                     title: action.payload.title,
                     image: action.payload.image,
                     price: action.payload.price
