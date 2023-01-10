@@ -63,6 +63,9 @@
 .footer-container .distributor{
     color: lightsteelblue !important;
 }
+.footer-container .distributor:hover{
+    color: lightsteelblue !important;
+}
 
 .botom-bg-color{
     background-color: #131A22;
