@@ -113,7 +113,7 @@ const Shop = () => {
                               to={`/shop/${item.id}`}
                               className="btn btn-sm text-dark p-0"
                             >
-                              <i className="fas fa-eye text-primary mr-1"></i>
+                              <i className="fas fa-eye trendy-icons mr-1"></i>
                               View Detail
                             </Link>
                             <button
@@ -122,7 +122,7 @@ const Shop = () => {
                                 addToCartHandler(item)
                               }
                             >
-                              <i className="fas fa-shopping-cart text-primary mr-1"></i>
+                              <i className="fas fa-shopping-cart trendy-icons mr-1"></i>
                               Add To Cart
                             </button>
                           </div>
