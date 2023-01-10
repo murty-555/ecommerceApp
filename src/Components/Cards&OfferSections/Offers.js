@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Offers.css';
 const offers = () => {
   return (
@@ -10,7 +11,7 @@ const offers = () => {
                         <div className=' text-cont-right text-light'>
                             <h4 className='offer'>20% OFF THE ALL ORDER</h4>
                             <h1 className='card-heading pb-2'>Spring Collection</h1>
-                            <a className='button' href="@" >Shop Now</a>
+                            <Link className='button' to="/shop" >Shop Now</Link>
                         </div>
                     </div>  
                 </div>
@@ -19,7 +20,7 @@ const offers = () => {
                         <div className='text-light'>
                             <h4 className='offer'>20% OFF THE ALL ORDER</h4>
                             <h1 className='card-heading w-100 pb-2'>Winter Collection</h1>
-                            <a className='button' href="@" >Shop Now</a>
+                            <Link className='button' to="/shop" >Shop Now</Link>
                         </div>
                         <img className='girl-image' alt="girlpic" src={'images/offer-2.png'}></img>    
                     </div>  
