@@ -14,7 +14,7 @@ const TabSection = () => {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center",marginTop:"10px" }}>
         <Nav variant="tabs">
           <Nav.Item>
             <Nav.Link

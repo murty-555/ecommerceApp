@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Header1.css";
 import Login from "../Login&Register/Login";
 import Register from "../Login&Register/Register";
+const CategoriesList=[{name:"Shirts",},{name:"Jeans",},{name:"Swimwear",},{name:"Sleepwear",},{name:"Sportswear",},{name:"Jumpsuits",},{name:"Blazers",},{name:"Jackets",},{name:"Shoes",},]
+const list2=[{name:"Men's Dresses"},{name:"Women's Dresses"},{name:"Baby's Dresses"}]
 const Header1=()=>{
     
     return(
@@ -18,20 +20,14 @@ const Header1=()=>{
                         <div className="nav-item dropdown clr">
                             <a href="/" className="nav-link" data-toggle="dropdown" >Dresses <i className="fa fa-angle-down float-right mt-1"></i></a>
                             <div className="dropdown-menu position-absolute  border-0 rounded-0 w-100 m-0" style={{"backgroundColor":"#edf1ff"}}>
-                                <a href="/" className="dropdown-item">Men's Dresses</a>
-                                <a href="/" className="dropdown-item">Women's Dresses</a>
-                                <a href="/" className="dropdown-item">Baby's Dresses</a>
+                            {list2.map((item2)=>
+                                <a href="/" className="dropdown-item">{item2.name}</a>
+                                )}
                             </div>
                         </div>
-                        <a href="/" className="nav-item nav-link">Shirts</a>
-                        <a href="/" className="nav-item nav-link">Jeans</a>
-                        <a href="/" className="nav-item nav-link">Swimwear</a>
-                        <a href="/" className="nav-item nav-link">Sleepwear</a>
-                        <a href="/" className="nav-item nav-link">Sportswear</a>
-                        <a href="/" className="nav-item nav-link">Jumpsuits</a>
-                        <a href="/" className="nav-item nav-link">Blazers</a>
-                        <a href="/" className="nav-item nav-link">Jackets</a>
-                        <a href="/" className="nav-item nav-link">Shoes</a>
+                        {CategoriesList.map((item)=>
+                        <a href="/" className="nav-item nav-link">{item.name}</a>
+                        )}
                     </div>
                 </nav>
             </div>

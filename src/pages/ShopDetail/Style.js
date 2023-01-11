@@ -52,15 +52,15 @@ const Style = () => {
       ) : (
         <div className="row" key={product.id}>
           <div className=" col-lg-4 ">
-            <div className="car">
+            {/* <div className="car"> */}
               <div className="back">
                 <img src={product.image} alt="img" />
               </div>
-            </div>
+            {/* </div> */}
           </div>
 
           <div className="col-lg-8 ">
-            <div style={{ marginLeft: "70px", marginTop: "50px" }}>
+            <div style={{ marginLeft: "30px", marginTop: "50px" }}>
               <h3>{product.title}</h3>
               <div className="d-flex align-items-center">
                 <DynamicStar

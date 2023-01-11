@@ -6,6 +6,43 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+const IconList=[
+    {
+    name:"FAQs",
+    href:"https://www.facebook.com/Amazon/",
+    },
+    {
+        name:"Help",
+        href:"https://www.facebook.com/Amazon/",
+    },
+    {
+     name:"Support",
+     href:"https://www.facebook.com/Amazon/",
+    },
+]
+const IconList2=[
+    {
+    name:"fab fa-facebook-f",
+    href:"https://www.facebook.com/Amazon/",
+    },
+    {
+        name:"fab fa-twitter",
+        href:"https://twitter.com/amazonin",
+    },
+    {
+        name:"fab fa-linkedin-in",
+        href:"https://in.linkedin.com/company/amazon",
+    },
+    {
+     name:"fab fa-instagram",
+     href:"https://www.instagram.com/amazon/?hl=en",
+    },
+    {
+         name:"fab fa-youtube",
+        href:"https://www.youtube.com/user/amazon",
+    },
+]
+
 const Header=()=>{
     const {cartList} = useSelector(state => ({...state.cart}))
     let cart_count = 0;
@@ -19,30 +56,20 @@ const Header=()=>{
         <div className="row  py-2 px-xl-5" style={{backgroundColor:"#232F3E"}}>
             <div className="col-lg-6 d-none d-lg-block" >
                 <div className="d-inline-flex align-items-center" style={{'text-decoration':"none"}}>
-                    <a className="text-light " href="https://reactjs.org/docs/faq-functions.html" target="_blank" rel="noreferrer">FAQs</a>
-                    <span className="text-muted px-2">|</span>
-                    <a className="text-light" href="https://reactjs.org/docs/faq-functions.html" target="_blank" rel="noreferrer">Help</a>
-                    <span className="text-muted px-2">|</span>
-                    <a className="text-light" href="https://reactjs.org/docs/faq-functions.html" target="_blank" rel="noreferrer">Support</a>
-                </div>
+                {IconList.map((icon)=>
+                    <a className="text-light px-2" href={icon.href} target="_blank" rel="noreferrer">
+                        {icon.name}
+                    </a>
+                    )}
+                    </div>
             </div>
             <div className="col-lg-6  text-lg-right">
                 <div className="d-inline-flex align-items-center">
-                    <a className="text-light px-2" href="https://www.facebook.com/Amazon/" target="_blank" rel="noreferrer">
-                        <i className="fab fa-facebook-f"></i>
+                {IconList2.map((icon1)=>
+                    <a className="text-light px-2" href={icon1.href} target="_blank" rel="noreferrer">
+                        <i className={icon1.name}></i>
                     </a>
-                    <a className="text-light px-2" href="https://twitter.com/Amazon/" target="_blank" rel="noreferrer">
-                        <i className="fab fa-twitter"></i>
-                    </a>
-                    <a className="text-light px-2" href="https://in.linkedin.com/company/amazon" target="_blank" rel="noreferrer">
-                        <i className="fab fa-linkedin-in"></i>
-                    </a>
-                    <a className="text-light px-2" href="https://www.instagram.com/amazon/?hl=en" target="_blank" rel="noreferrer">
-                        <i className="fab fa-instagram"></i>
-                    </a>
-                    <a className="text-light pl-2"href="https://www.youtube.com/user/amazon" target="_blank" rel="noreferrer">
-                        <i className="fab fa-youtube"></i>
-                    </a>
+                 )}
                 </div>
             </div>
         </div>

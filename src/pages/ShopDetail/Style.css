@@ -21,6 +21,8 @@
 .back img{
     height: 400px;
     width: 400px;
+    
+
 }
 .back{
     border:2px;
@@ -28,12 +30,14 @@
     border-color:whitesmoke;
     background-color: white;
     margin-bottom: 10px;
+    padding: 15px;
 
-    margin-left: 5px;
-    margin-top: 50px;
-    padding-right: 15px;
-    padding-left: 15px;
+    /* margin-left: 5px;*/
+    margin-top: 50px; 
+    /* padding-right: 15px;
+    padding-left: 15px; */
     align-content: center;
+    text-align: center;
 }
 .text{
     color:#6F6F6F;
@@ -77,3 +81,41 @@ button, input {
     padding-left: 15px;
     align-content: center;
 } */
+@media (min-width: 320px){
+    .back img{
+     height: 150px;
+     width: 150px;
+     
+}
+}
+@media (min-width: 425px){
+    .back img{
+     height: 200px;
+     width: 200px;
+     
+}
+}
+@media (min-width: 768px){
+    .back img{
+     height: 300px;
+     width: 300px;
+     
+}
+}
+@media (min-width: 992px){
+   .back{
+    padding: 2px;
+   }
+   .back img{
+    height: 350px;
+   }
+     
+}
+@media (max-width: 425px){
+    .button_PM, .quantity_er{
+        width: 26px;
+    }
+      
+ }
+
+

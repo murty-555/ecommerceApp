@@ -1,6 +1,18 @@
 import React from "react";
 import PageHeader from "../../Components/page-header/PageHeader";
 import "./Contactus.css";
+const Address=[
+  {store:"store1",
+  street:"123Street, New York, USA",
+  mail:"info@example.com",
+  Mobileno:"+01234567890",
+},
+{store:"store2",
+  street:"123Street, New York, USA",
+  mail:"info@example.com",
+  Mobileno:"+01234567890",
+},
+]
 
 const Contactus = () => {
   return (
@@ -11,7 +23,7 @@ const Contactus = () => {
           <span>Contact For Any Queries</span>
         </h2>
       </div>
-      <div className="row px-xl-5">
+      <div className="row px-xl-5 p-3">
         <div className="col-lg-7 mb-5">
           <div className="contact-form">
             <div id="success"></div>
@@ -80,36 +92,21 @@ const Contactus = () => {
             duo amet et. Est elitr dolor elitr erat sit sit. Dolor diam et erat
             clita ipsum justo sed.
           </p>
-          <div className="d-flex flex-column mb-3">
-            <h5 className="font-weight-semi-bold mb-3">Store 1</h5>
-            <p className="mb-2">
-              <i className="fa fa-map-marker-alt text-dark mr-3"></i>123
-              Street, New York, USA
-            </p>
-            <p className="mb-2">
-              <i className="fa fa-envelope text-dark mr-3"></i>
-              info@example.com
-            </p>
-            <p className="mb-2">
-              <i className="fa fa-phone-alt text-dark mr-3"></i>+012 345
-              67890
-            </p>
-          </div>
-          <div className="d-flex flex-column">
-            <h5 className="font-weight-semi-bold mb-3">Store 2</h5>
-            <p className="mb-2">
-              <i className="fa fa-map-marker-alt text-dark mr-3"></i>123
-              Street, New York, USA
-            </p>
-            <p className="mb-2">
-              <i className="fa fa-envelope text-dark mr-3"></i>
-              info@example.com
-            </p>
-            <p className="mb-0">
-              <i className="fa fa-phone-alt text-dark mr-3"></i>+012 345
-              67890
-            </p>
-          </div>
+          {Address.map((item)=>
+           <div className="d-flex flex-column">
+           <h5 className="font-weight-semi-bold mb-3">{item.store}</h5>
+           <p className="mb-2">
+             <i className="fa fa-map-marker-alt text-dark mr-3"></i>{item.street}
+           </p>
+           <p className="mb-2">
+             <i className="fa fa-envelope text-dark mr-3"></i>
+             {item.mail}
+           </p>
+           <p className="mb-0">
+             <i className="fa fa-phone-alt text-dark mr-3"></i>{item.Mobileno}
+           </p>
+         </div>
+           )}
         </div>
       </div>
     </div>
