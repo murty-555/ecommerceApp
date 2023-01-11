@@ -17,8 +17,8 @@ const Shop = () => {
   const [perpage, setPerpage] = useState([]);
   useEffect(() => {
     dispatch(fetchProducts());
-    pageHandler(1);
-    setPerpage(productsList.slice(0, 10));
+    // pageHandler(1);
+    // setPerpage(productsList.slice(0, 10));
   }, [dispatch]);
 
   const pageHandler = (pageNumber) => {
