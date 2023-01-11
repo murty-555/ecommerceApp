@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import "./Shop.css";
 import Filters from "./Filters";
 import PageHeader from "../../Components/page-header/PageHeader";
@@ -7,13 +7,29 @@ import { useDispatch, useSelector } from "react-redux";
 import fetchProducts from "../../actions/productsAction";
 import { Link } from "react-router-dom";
 import { cartActionTypes } from "../../actions/actionTypes/cartActionTypes";
+import Pagination from "./Pagination";
 
 const Shop = () => {
   const dispatch = useDispatch();
-  const { productsList, isLoading } = useSelector((state) => ({...state.products}));
+  const { productsList, isLoading } = useSelector((state) => ({
+    ...state.products,
+  }));
+  const [perpage, setPerpage] = useState([]);
   useEffect(() => {
     dispatch(fetchProducts());
+    pageHandler(1);
+    setPerpage(productsList.slice(0, 10));
   }, [dispatch]);
+
+  const pageHandler = (pageNumber) => {
+    console.log(pageNumber);
+    setPerpage(productsList.slice(pageNumber * 9 - 9, pageNumber * 9));
+  };
+  useEffect(() => {
+    if (productsList.length > 0) {
+      setPerpage(productsList.slice(0, 9));
+    }
+  }, [productsList]);
 
   // if (!isLoading) {
   //   console.log(productsList);
@@ -22,12 +38,12 @@ const Shop = () => {
   const addToCartHandler = (item) => {
     dispatch({
       type: cartActionTypes.ADD_TO_CART,
-      payload: item
-    })
-  }
+      payload: item,
+    });
+  };
 
   return (
-    <div style={{backgroundColor:"#eaeded"}}>
+    <div style={{ backgroundColor: "#eaeded" }}>
       <PageHeader headerName={"Our Shop"} />
       <div class="container-fluid pt-5">
         <div class="row px-xl-5">
@@ -86,7 +102,7 @@ const Shop = () => {
                   {isLoading ? (
                     <LoadingSpinner />
                   ) : (
-                    productsList.map((item, key) => (
+                    perpage.map((item, key) => (
                       <div
                         className="col-lg-4 col-md-6 col-sm-12 pb-1"
                         key={key}
@@ -118,9 +134,7 @@ const Shop = () => {
                             </Link>
                             <button
                               className="btn btn-sm text-dark p-0"
-                              onClick={() =>
-                                addToCartHandler(item)
-                              }
+                              onClick={() => addToCartHandler(item)}
                             >
                               <i className="fas fa-shopping-cart trendy-icons mr-1"></i>
                               Add To Cart
@@ -132,6 +146,9 @@ const Shop = () => {
                   )}
                 </div>
               </div>
+
+              <Pagination data={productsList} pageHandler={pageHandler}/>
+
               {/* <div class="col-12 pb-1">
                 <nav aria-label="Page navigation">
                   <ul class="pagination justify-content-center mb-3">

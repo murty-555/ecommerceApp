@@ -105,7 +105,7 @@ button, input {
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #D19C97;
+    color: black !important;
     background-color: #fff;
     border: 1px solid #dee2e6;
 }
@@ -130,8 +130,8 @@ button, input {
 .page-item.active .page-link {
     z-index: 3;
     color: #fff;
-    background-color: #D19C97 !important;
-    border-color: #D19C97 !important;
+    background-color: lightsteelblue !important;
+    border-color: lightsteelblue !important;
 }
 .btn {
     display: inline-block;

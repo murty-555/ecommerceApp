@@ -15,7 +15,7 @@ const card = () => {
         <div className='d-flex align-items-center justify-content-center border mb-4'>
         <div style={{backgroundColor:"white",padding:"10px 10px",display:"flex", alignItems:"center", margin:"20px" }}>
         <CheckIcon style={{color:"steelblue",width:"58px",height:'40px'}}/>
-        <h2 style={{paddingLeft:"10px",fontSize:"23px"}}>
+        <h2 style={{paddingLeft:"5px",fontSize:"23px"}} className='w-100'>
           Quality Product
         </h2>
         </div>
