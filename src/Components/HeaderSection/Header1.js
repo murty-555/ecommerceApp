@@ -3,10 +3,18 @@ import { Link } from "react-router-dom";
 import "./Header1.css";
 import Login from "../Login&Register/Login";
 import Register from "../Login&Register/Register";
+import { useDispatch } from "react-redux";
+import { loginActionTypes } from "../../actions/actionTypes/loginActionTypes";
 const CategoriesList=[{name:"Shirts",},{name:"Jeans",},{name:"Swimwear",},{name:"Sleepwear",},{name:"Sportswear",},{name:"Jumpsuits",},{name:"Blazers",},{name:"Jackets",},{name:"Shoes",},]
 const list2=[{name:"Men's Dresses"},{name:"Women's Dresses"},{name:"Baby's Dresses"}]
 const Header1=()=>{
-    
+    const dispatch = useDispatch();
+    const user = localStorage.getItem('user');
+    console.log(user);
+    const logoutHandler = () => {
+        dispatch({type: loginActionTypes.LOGOUT});
+        localStorage.removeItem('user')
+    }
     return(
         <div style={{backgroundColor:"#eaeded"}} className="container-fluid header1-container">
         <div className="row border-top px-xl-5">
@@ -51,10 +59,13 @@ const Header1=()=>{
                             </div>
                             <Link to="/contact" className="nav-item nav-link text-dark">Contact</Link>
                         </div>
-                        <div className="navbar-nav ml-auto py-0">
+                        {!user ? (<div className="navbar-nav ml-auto py-0">
                         <Login nameOfClass={"nav-item nav-link text-dark"} />
                         <Register nameOfClass={"nav-item nav-link text-dark"} />
-                        </div>
+                        </div>):
+                        (<div className="navbar-nav ml-auto py-0">
+                        <span className="navbar-nav ml-auto py-0 logout-button" onClick={logoutHandler}>Logout</span>
+                        </div>)}
                     </div>
                 </nav>
             </div>

@@ -27,6 +27,13 @@
 .header1-container .categerious:hover {
     color:black;
 }
+.header1-container .logout-button {
+    cursor: pointer;
+}
+.header1-container .logout-button:hover {
+    color: lightsteelblue;
+}
+
 
 /* .header1-container{
     background-color: lightsteelblue;
