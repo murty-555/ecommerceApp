@@ -14,6 +14,8 @@ const loginReducer=(state=initialState,action)=>{
             return {isLoading:false, isLogedIn:true,errMsg:null, username:action.payload}
         case loginActionTypes.LOGIN_FAILURE:
             return {isLoading:false,isLogedIn:false,errMsg:action.payload}
+        case loginActionTypes.LOGOUT:
+            return {isLoading:false,isLogedIn:false,errMsg:null,username:null}
         default:
             return state
     }
