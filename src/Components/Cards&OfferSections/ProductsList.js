@@ -1,6 +1,6 @@
-import React from 'react'
-import './ProductsList.css'
-const App = () => {
+import React from "react";
+import "./ProductsList.css";
+const ProductList = () => {
   const data = [
     {
       id: 1,
@@ -35,31 +35,27 @@ const App = () => {
   ];
   return (
     <center>
-    <div>
-      <div className='container-fluid pt-5'>
-        <div className='row px-xl-5 pb-3'>
-        {data.map((item) => (
-          <div className='col-lg-4 col-md-6 col-sm-12 pb-1 '>
-            <div className='d-flex flex-column border mb-4 pb-2'>
-          <div className='products-container'>
-            <p className='product-heading'> 15 Products</p>
-            <div className='inner'>
-              <img alt="" src={item.imgSrc} className='size ' />
-            </div>
-            <h3 className='product-name'>
-              {item.title}
-            </h3>
+      <div>
+        <div className="container-fluid pt-5">
+          <div className="row px-xl-5 pb-3">
+            {data.map((item, key) => (
+              <div key={key} className="col-lg-4 col-md-6 col-sm-12 pb-1 ">
+                <div className="d-flex flex-column border mb-4 pb-2">
+                  <div className="products-container">
+                    <p className="product-heading"> 15 Products</p>
+                    <div className="inner">
+                      <img alt="" src={item.imgSrc} className="size " />
+                    </div>
+                    <h3 className="product-name">{item.title}</h3>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          </div>
-          </div>
-         ))}
         </div>
       </div>
-      </div>
     </center>
+  );
+};
 
-
-  )
-}
-
-export default App
+export default ProductList;

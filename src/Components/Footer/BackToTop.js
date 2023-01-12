@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import './BackToTop.css';
+import React, { useState } from "react";
+import "./BackToTop.css";
 
 const BackToTop = () => {
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
   window.onscroll = function () {
     scrollFunction();
   };
@@ -23,14 +23,15 @@ const BackToTop = () => {
     document.documentElement.scrollTop = 0;
   }
   return (
-    <div className='back-to-top-container'>
-    <button
+    <div className="back-to-top-container">
+      <button
         className={show ? "btn back-to-top" : "d-none"}
-        onClick={backToTop}>
+        onClick={backToTop}
+      >
         <i className="fa fa-angle-double-up"></i>
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default BackToTop
+export default BackToTop;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Shop.css";
 import Filters from "./Filters";
 import PageHeader from "../../Components/page-header/PageHeader";
@@ -22,7 +22,7 @@ const Shop = () => {
   }, [dispatch]);
 
   const pageHandler = (pageNumber) => {
-    console.log(pageNumber);
+    // console.log(pageNumber);
     setPerpage(productsList.slice(pageNumber * 9 - 9, pageNumber * 9));
   };
   useEffect(() => {
@@ -30,10 +30,6 @@ const Shop = () => {
       setPerpage(productsList.slice(0, 9));
     }
   }, [productsList]);
-
-  // if (!isLoading) {
-  //   console.log(productsList);
-  // }
 
   const addToCartHandler = (item) => {
     dispatch({
@@ -45,32 +41,32 @@ const Shop = () => {
   return (
     <div style={{ backgroundColor: "#eaeded" }}>
       <PageHeader headerName={"Our Shop"} />
-      <div class="container-fluid pt-5">
-        <div class="row px-xl-5">
-          <div class="col-lg-2 col-md-12">
+      <div className="container-fluid pt-5">
+        <div className="row px-xl-5">
+          <div className="col-lg-2 col-md-12">
             <Filters />
           </div>
-          <div class="col-lg-10 col-md-12">
-            <div class="row pb-3">
-              <div class="col-12 pb-1">
-                <div class="d-flex align-items-center justify-content-between mb-4">
+          <div className="col-lg-10 col-md-12">
+            <div className="row pb-3">
+              <div className="col-12 pb-1">
+                <div className="d-flex align-items-center justify-content-between mb-4">
                   <form action="">
-                    <div class="input-group">
+                    <div className="input-group">
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         placeholder="Search by name"
                       />
-                      <div class="input-group-append">
-                        <span class="input-group-text bg-transparent text-primary">
-                          <i class="fa fa-search text-dark"></i>
+                      <div className="input-group-append">
+                        <span className="input-group-text bg-transparent text-primary">
+                          <i className="fa fa-search text-dark"></i>
                         </span>
                       </div>
                     </div>
                   </form>
-                  <div class="dropdown ml-4">
+                  <div className="dropdown ml-4">
                     <button
-                      class="btn border dropdown-toggle"
+                      className="btn border dropdown-toggle"
                       type="button"
                       id="triggerId"
                       data-toggle="dropdown"
@@ -80,16 +76,16 @@ const Shop = () => {
                       Sort by
                     </button>
                     <div
-                      class="dropdown-menu dropdown-menu-right"
+                      className="dropdown-menu dropdown-menu-right"
                       aria-labelledby="triggerId"
                     >
-                      <a class="dropdown-item" href="/shop">
+                      <a className="dropdown-item" href="/shop">
                         Latest
                       </a>
-                      <a class="dropdown-item" href="/shop">
+                      <a className="dropdown-item" href="/shop">
                         Popularity
                       </a>
-                      <a class="dropdown-item" href="/shop">
+                      <a className="dropdown-item" href="/shop">
                         Best Rating
                       </a>
                     </div>
@@ -146,45 +142,7 @@ const Shop = () => {
                   )}
                 </div>
               </div>
-
-              <Pagination data={productsList} pageHandler={pageHandler}/>
-
-              {/* <div class="col-12 pb-1">
-                <nav aria-label="Page navigation">
-                  <ul class="pagination justify-content-center mb-3">
-                    <li class="page-item disabled">
-                      <a class="page-link" href="/shop" aria-label="Previous">
-                        <span aria-hidden="true">«</span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                    </li>
-                    <li
-                      class="page-item active"
-                      style={{ backgroundColor: "#D19C97" }}
-                    >
-                      <a class="page-link" href="/shop">
-                        1
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="/shop">
-                        2
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="/shop">
-                        3
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="/shop" aria-label="Next">
-                        <span aria-hidden="true">»</span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div> */}
+              <Pagination data={productsList} pageHandler={pageHandler} />
             </div>
           </div>
         </div>

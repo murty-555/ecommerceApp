@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/HeaderSection/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/Footer/Footer";
-import Home from "./pages/HomePage/Home";
-import Shop from './pages/Shop/Shop';
-import ShoppingCart from './pages/shopping-cart-page/ShoppingCart';
-import Checkout from './pages/Checkoutpage/Checkout';
-import Contactus from './pages/contact-page/Contactus';
-import ShopDetail from "./pages/ShopDetail/ShopDetail";
+import Home from "./pages/home/Home";
+import Shop from './pages/shop/Shop';
+import ShoppingCart from './pages/shopping-cart/ShoppingCart';
+import Checkout from './pages/checkout/Checkout';
+import Contactus from './pages/contact/Contactus';
+import ShopDetail from "./pages/shop-detail/ShopDetail";
 
 function App() {
   return (
