@@ -71,7 +71,7 @@ export default function Checkout() {
                 <div className="col-md-6 form-group">
                   <label>Country</label>
                   <select className="custom-select">
-                    <option selected="">United States</option>
+                    <option>United States</option>
                     <option>Afghanistan</option>
                     <option>Albania</option>
                     <option>Algeria</option>
@@ -108,7 +108,7 @@ export default function Checkout() {
                       className="custom-control-input"
                       id="newaccount"
                     />
-                    <label className="custom-control-label" for="newaccount">
+                    <label className="custom-control-label" htmlFor="newaccount">
                       Create an account
                     </label>
                   </div>
@@ -123,7 +123,7 @@ export default function Checkout() {
                     />
                     <label
                       className="custom-control-label"
-                      for="shipto"
+                      htmlFor="shipto"
                       data-toggle="collapse"
                       data-target="#shipping-address"
                     >
@@ -187,7 +187,7 @@ export default function Checkout() {
                 <div className="col-md-6 form-group">
                   <label>Country</label>
                   <select className="custom-select">
-                    <option selected="">United States</option>
+                    <option>United States</option>
                     <option>Afghanistan</option>
                     <option>Albania</option>
                     <option>Algeria</option>
@@ -263,7 +263,7 @@ export default function Checkout() {
                       name="payment"
                       id="paypal"
                     />
-                    <label className="custom-control-label" for="paypal">
+                    <label className="custom-control-label" htmlFor="paypal">
                       Paypal
                     </label>
                   </div>
@@ -276,7 +276,7 @@ export default function Checkout() {
                       name="payment"
                       id="directcheck"
                     />
-                    <label className="custom-control-label" for="directcheck">
+                    <label className="custom-control-label" htmlFor="directcheck">
                       Direct Check
                     </label>
                   </div>
@@ -289,7 +289,7 @@ export default function Checkout() {
                       name="payment"
                       id="banktransfer"
                     />
-                    <label className="custom-control-label" for="banktransfer">
+                    <label className="custom-control-label" htmlFor="banktransfer">
                       Bank Transfer
                     </label>
                   </div>

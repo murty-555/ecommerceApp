@@ -21,7 +21,7 @@ function Login({ nameOfClass }) {
       navigate('/')
     }
   };
-  console.log(flag);
+  // console.log(flag);
   return (
     <>
       <span

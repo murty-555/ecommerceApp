@@ -1,23 +1,25 @@
 import React from "react";
 import PageHeader from "../../Components/page-header/PageHeader";
 import "./Contactus.css";
-const Address=[
-  {store:"store1",
-  street:"123Street, New York, USA",
-  mail:"info@example.com",
-  Mobileno:"+01234567890",
-},
-{store:"store2",
-  street:"123Street, New York, USA",
-  mail:"info@example.com",
-  Mobileno:"+01234567890",
-},
-]
+const Address = [
+  {
+    store: "store1",
+    street: "123Street, New York, USA",
+    mail: "info@example.com",
+    Mobileno: "+01234567890",
+  },
+  {
+    store: "store2",
+    street: "123Street, New York, USA",
+    mail: "info@example.com",
+    Mobileno: "+01234567890",
+  },
+];
 
 const Contactus = () => {
   return (
-    <div style={{backgroundColor:"#eaeded"}} className="contact-us-page">
-      <PageHeader headerName={"Contact Us"}/>
+    <div style={{ backgroundColor: "#eaeded" }} className="contact-us-page">
+      <PageHeader headerName={"Contact Us"} />
       <div className="container-fluid pt-5 pb-5">
         <h2 className="decorated">
           <span>Contact For Any Queries</span>
@@ -27,7 +29,7 @@ const Contactus = () => {
         <div className="col-lg-7 mb-5">
           <div className="contact-form">
             <div id="success"></div>
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <form name="sentMessage" id="contactForm" noValidate="novalidate">
               <div className="control-group">
                 <input
                   type="text"
@@ -92,21 +94,23 @@ const Contactus = () => {
             duo amet et. Est elitr dolor elitr erat sit sit. Dolor diam et erat
             clita ipsum justo sed.
           </p>
-          {Address.map((item)=>
-           <div className="d-flex flex-column">
-           <h5 className="font-weight-semi-bold mb-3">{item.store}</h5>
-           <p className="mb-2">
-             <i className="fa fa-map-marker-alt text-dark mr-3"></i>{item.street}
-           </p>
-           <p className="mb-2">
-             <i className="fa fa-envelope text-dark mr-3"></i>
-             {item.mail}
-           </p>
-           <p className="mb-0">
-             <i className="fa fa-phone-alt text-dark mr-3"></i>{item.Mobileno}
-           </p>
-         </div>
-           )}
+          {Address.map((item, key) => (
+            <div key={key} className="d-flex flex-column">
+              <h5 className="font-weight-semi-bold mb-3">{item.store}</h5>
+              <p className="mb-2">
+                <i className="fa fa-map-marker-alt text-dark mr-3"></i>
+                {item.street}
+              </p>
+              <p className="mb-2">
+                <i className="fa fa-envelope text-dark mr-3"></i>
+                {item.mail}
+              </p>
+              <p className="mb-0">
+                <i className="fa fa-phone-alt text-dark mr-3"></i>
+                {item.Mobileno}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
