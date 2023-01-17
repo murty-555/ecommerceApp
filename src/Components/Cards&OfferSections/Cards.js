@@ -9,8 +9,8 @@ const card = () => {
     <div>
       <div className="container-fluid">
         <div className="row px-xl-5 pb-3">
-          <div className="container col-lg-3 col-md-6 col-sm-12 pb-1 ">
-            <div className="d-flex align-items-center justify-content-center border mb-4">
+          <div className="container col-lg-3 col-md-6 col-sm-12 pb-1">
+            <div className="d-flex align-items-center justify-content-center border">
               <div
                 style={{
                   backgroundColor: "white",
@@ -33,7 +33,7 @@ const card = () => {
             </div>
           </div>
 
-          <div className="container col-lg-3 col-md-6 col-sm-12 ">
+          <div className="container col-lg-3 col-md-6 col-sm-12 pb-1">
             <div className="d-flex align-items-center justify-content-center border">
               <div
                 style={{
@@ -54,7 +54,7 @@ const card = () => {
             </div>
           </div>
 
-          <div className="container col-lg-3 col-md-6 col-sm-12  ">
+          <div className="container col-lg-3 col-md-6 col-sm-12 pb-1">
             <div className="d-flex align-items-center justify-content-center border">
               <div
                 style={{
@@ -75,7 +75,7 @@ const card = () => {
             </div>
           </div>
 
-          <div className="container col-lg-3 col-md-6 col-sm-12">
+          <div className="container col-lg-3 col-md-6 col-sm-12 pb-1">
             <div className="d-flex align-items-center justify-content-center border">
               <div
                 style={{

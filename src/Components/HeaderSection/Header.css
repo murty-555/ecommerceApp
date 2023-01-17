@@ -51,7 +51,7 @@
     text-decoration: none;
 }
 .header-container .text-light:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 .header-container .text-lg-right{
     text-align: center;
