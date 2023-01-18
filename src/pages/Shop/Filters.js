@@ -53,7 +53,7 @@ const Filters = () => {
                   className="custom-control-input"
                   id={formData.label}
                 />
-                <label className="custom-control-label" htmlFor="price-all">
+                <label className="custom-control-label" htmlFor={formData.label}>
                   {formData.labelData}
                 </label>
                 <span className="badge border font-weight-normal">
