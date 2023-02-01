@@ -147,7 +147,7 @@ const ShoppingCart = () => {
                 <h5>${Number(totalCart).toLocaleString("en-US")}</h5>
               </div>
               <button
-                className="btn btn-block checkout-button"
+                className="btn btn-block checkout-button text-light"
                 onClick={navigateToCheckout}
               >
                 Proceed To Checkout
