@@ -77,7 +77,7 @@ const Contactus = () => {
               </div>
               <div>
                 <button
-                  className="btn py-2 px-4"
+                  className="btn py-2 px-4 text-light"
                   type="submit"
                   id="sendMessageButton"
                 >
@@ -96,7 +96,7 @@ const Contactus = () => {
           </p>
           {Address.map((item, key) => (
             <div key={key} className="d-flex flex-column">
-              <h5 className="font-weight-semi-bold mb-3">{item.store}</h5>
+              <h5 className="font-weight-semi-bold mb-3 mt-3">{item.store}</h5>
               <p className="mb-2">
                 <i className="fa fa-map-marker-alt text-dark mr-3"></i>
                 {item.street}

@@ -60,7 +60,7 @@ function Footer() {
                     </div>
                     <div>
                       <button
-                        className="btn border-0 py-3 btn-block"
+                        className="btn border-0 py-3 btn-block text-light"
                         type="submit"
                       >
                         Subscribe Now

@@ -118,7 +118,7 @@ export default function Trendy() {
                   placeholder="Email Goes Here"
                 />
                 <div className="input-group-append">
-                  <button className="btn but btn-dark bg-dark px-4">
+                  <button className="btn but btn-dark bg-dark px-4 text-light">
                     Subscribe
                   </button>
                 </div>
