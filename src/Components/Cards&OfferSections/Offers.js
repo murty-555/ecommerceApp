@@ -1,30 +1,43 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './Offers.css';
+const dummy=[
+  {
+    class:'P-R',
+    image:'images/offer-1.png',
+    text:'Spring Collection',
+    order1:'order-0',
+    order2:'order-1',
+    classRight:'text-cont-right'
+  },
+  {
+    class:'P-L',
+    image:'images/offer-2.png',
+    text:'Winter Collection',
+    order1:'order-1',
+    order2:'order-0'
+  }
+]
+
+
+
 const offers = () => {
   return (
     <div className='container-fluid '>
             <div className='row px-xl-5'>
+              {
+                dummy.map((value,index)=>
                 <div className='col-md-6 '>
-                    <div className='small-container P-R d-flex flex-row justify-content-between' style={{alignItems:'center'}}>
-                        <img className='girl-image' alt="girlpic" src={'images/offer-1.png'}></img>
-                        <div className=' text-cont-right text-light'>
+                    <div className={`small-container d-flex flex-row justify-content-between ${value.class}`}   style={{alignItems:'center'}}>
+                        <img className={`girl-image ${value.order1}`} alt="girlpic" src={value.image}></img>
+                        <div className={`text-light ${value.order2} ${value.classRight}`}>
                             <h4 className='offer'>20% OFF THE ALL ORDER</h4>
-                            <h1 className='card-heading pb-2'>Spring Collection</h1>
+                            <h1 className='card-heading pb-2'>{value.text}</h1>
                             <Link className='button' to="/shop" >Shop Now</Link>
                         </div>
                     </div>  
                 </div>
-                <div className='col-md-6 '>
-                    <div className='small-container P-L d-flex flex-row justify-content-between' style={{alignItems:'center'}}>
-                        <div className='text-light'>
-                            <h4 className='offer'>20% OFF THE ALL ORDER</h4>
-                            <h1 className='card-heading w-100 pb-2'>Winter Collection</h1>
-                            <Link className='button' to="/shop" >Shop Now</Link>
-                        </div>
-                        <img className='girl-image' alt="girlpic" src={'images/offer-2.png'}></img>    
-                    </div>  
-                </div> 
+                )}
             </div>    
         </div>
   )
