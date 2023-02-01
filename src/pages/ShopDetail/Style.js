@@ -97,6 +97,7 @@ const Style = () => {
                         control={<Radio style={{ color: "midnightblue" }} />}
                         label="XS"
                         labelPlacement="end"
+                        checked
                       />
                       <FormControlLabel
                         value="S"
@@ -150,6 +151,7 @@ const Style = () => {
                         control={<Radio style={{ color: "midnightblue" }} />}
                         label="White"
                         labelPlacement="end"
+                        checked
                       />
                       <FormControlLabel
                         value="Red"
