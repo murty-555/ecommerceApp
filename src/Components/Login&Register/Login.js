@@ -11,12 +11,31 @@ function Login({ nameOfClass }) {
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [flag, setFlag] = useState(false);
+  const [detailsNotValid, setDetailsNotValid] = useState(false);
+  const [userNotValid, setUserNotValid] = useState(false)
+  const [passwordNotValid, setPasswordNotValid] = useState(false)
   const loginHandler = (e) => {
     e.preventDefault();
-    if (!userName || !password) {
+    if (!userName && !password) {
       setFlag(true);
-    } else {
+    } 
+    else if(userName === "" && password !== ""){
       setFlag(false);
+      setDetailsNotValid(false);
+      setUserNotValid(true)
+      setPasswordNotValid(false)
+    }
+    else if(password === "" && userName !== ""){
+      setFlag(false);
+      setDetailsNotValid(false);
+      setUserNotValid(false)
+      setPasswordNotValid(true)
+    }
+    else {
+      setFlag(false);
+      setDetailsNotValid(false);
+      setUserNotValid(false);
+      setPasswordNotValid(false)
       dispatch(loginUser(userName, password));
       navigate('/')
     }
@@ -70,8 +89,9 @@ function Login({ nameOfClass }) {
                 </div>
                 <div className="col login-page-form-container">
                   <div className="login-page-icon-container text-center mb-2">
-                    <i className="fas fa-user-circle login-page-icon mb-2"></i>
-                    <p>Please enter your details to login</p>
+                    {/* <i className="fas fa-user-circle login-page-icon mb-2"></i> */}
+                    <img src="logo.png" alt="logo"/>
+                    <p className="login-name mt-3">Login</p>
                   </div>
                   <form className="login-page-form" onSubmit={loginHandler}>
                     <div className="inputs">
@@ -100,7 +120,10 @@ function Login({ nameOfClass }) {
                         placeholder="password"
                       />
                     </div>
-                    {flag && <p className="text-danger">Please enter valid credentials</p>}
+                    {flag && <p className="text-danger">Please enter username and password</p>}
+                    {detailsNotValid && <p className="text-danger">Please enter valid credentials</p>}
+                    {userNotValid && <p className="text-danger">Please enter username</p>}
+                    {passwordNotValid && <p className="text-danger">Please enter password</p>}
                     <div className="text-center login-button-container">
                       <button
                         type="submit"
