@@ -14,8 +14,10 @@ const ShoppingCart = () => {
   // const [items, setItems] = useState(cartData);
   let totalCart = 0;
   cartList.forEach(function (carttem) {
-    totalCart += Math.round(carttem.quantity * carttem.price);
+    totalCart += (carttem.quantity * carttem.price);
   });
+
+  const shippingCharges = totalCart >= 1 ? 1: 0;
 
   function TotalPrice(price, tonggia) {
     return Number(price * tonggia).toLocaleString("en-US");
@@ -138,13 +140,13 @@ const ShoppingCart = () => {
               </div>
               <div className="d-flex justify-content-between mt-3">
                 <h6>Shipping</h6>
-                <h6>Free</h6>
+                <h6>${shippingCharges}</h6>
               </div>
             </div>
             <div className="card-footer">
               <div className="d-flex justify-content-between mb-3">
                 <h5>Total</h5>
-                <h5>${Number(totalCart).toLocaleString("en-US")}</h5>
+                <h5>${Number(totalCart + shippingCharges).toLocaleString("en-US")}</h5>
               </div>
               <button
                 className="btn btn-block checkout-button text-light"
