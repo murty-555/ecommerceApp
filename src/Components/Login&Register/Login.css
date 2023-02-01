@@ -21,11 +21,18 @@
     flex-direction: column;
 
 }
+.login-name{
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 .login-popup-page .login-button{
     background-color: #131A22;
+    color: #ffffff !important;
 }
 .login-popup-page .login-button:hover{
-    color: #ffffff;
+    /* color: #ffffff; */
     background-color: #131A22;
 }
 .login-button-container{
