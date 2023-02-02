@@ -1,64 +1,76 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { cartActionTypes } from "../../actions/actionTypes/cartActionTypes";
 import "./Trendy.css";
+
+const data = [
+  {
+    id: 1,
+    image: "https://technext.github.io/eshopper/img/product-1.jpg",
+    title: "Women's Dress",
+    price: 94.5,
+    cross_price: 123,
+  },
+  {
+    id: 2,
+    image: "https://technext.github.io/eshopper/img/product-2.jpg",
+    title: "Kids Shirt",
+    price: 22.3,
+    cross_price: 30,
+  },
+  {
+    id: 3,
+    image: "https://technext.github.io/eshopper/img/product-3.jpg",
+    title: "Men's Stylish Shirt",
+    price: 55.99,
+    cross_price: 65,
+  },
+  {
+    id: 4,
+    image: "https://technext.github.io/eshopper/img/product-4.jpg",
+    title: "Women's Stylish Shirt",
+    price: 48.26,
+    cross_price: 55,
+  },
+  {
+    id: 5,
+    image: "https://technext.github.io/eshopper/img/product-5.jpg",
+    title: "Kids Stylish Shirt",
+    price: 42.6,
+    cross_price: 45,
+  },
+  {
+    id: 6,
+    image: "https://technext.github.io/eshopper/img/product-6.jpg",
+    title: "Men's Suit",
+    price: 40.24,
+    cross_price: 44,
+  },
+  {
+    id: 7,
+    image: "https://technext.github.io/eshopper/img/product-7.jpg",
+    title: "Women's Dress",
+    price: 26.66,
+    cross_price: 32,
+  },
+  {
+    id: 8,
+    image: "https://technext.github.io/eshopper/img/product-8.jpg",
+    title: "Kid's Dress",
+    price: 15.99,
+    cross_price: 19,
+  },
+];
 export default function Trendy() {
-  const data = [
-    {
-      id: 1,
-      imgSrc: "https://technext.github.io/eshopper/img/product-1.jpg",
-      title: "Colorful Stylish Shirt",
-      price: 123,
-      cross_price: 123,
-    },
-    {
-      id: 2,
-      imgSrc: "https://technext.github.io/eshopper/img/product-2.jpg",
-      title: "Colorful Stylish Shirt",
-      price: 123,
-      cross_price: 123,
-    },
-    {
-      id: 3,
-      imgSrc: "https://technext.github.io/eshopper/img/product-3.jpg",
-      title: "Colorful Stylish Shirt",
-      price: 123,
-      cross_price: 123,
-    },
-    {
-      id: 4,
-      imgSrc: "https://technext.github.io/eshopper/img/product-4.jpg",
-      title: "Colorful Stylish Shirt",
-      price: 123,
-      cross_price: 123,
-    },
-    {
-      id: 5,
-      imgSrc: "https://technext.github.io/eshopper/img/product-5.jpg",
-      title: "Colorful Stylish Shirt",
-      price: 123,
-      cross_price: 123,
-    },
-    {
-      id: 6,
-      imgSrc: "https://technext.github.io/eshopper/img/product-6.jpg",
-      title: "Colorful Stylish Shirt",
-      price: 123,
-      cross_price: 123,
-    },
-    {
-      id: 7,
-      imgSrc: "https://technext.github.io/eshopper/img/product-7.jpg",
-      title: "Colorful Stylish Shirt",
-      price: 123,
-      cross_price: 123,
-    },
-    {
-      id: 8,
-      imgSrc: "https://technext.github.io/eshopper/img/product-8.jpg",
-      title: "Colorful Stylish Shirt",
-      price: 123,
-      cross_price: 123,
-    },
-  ];
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (item) => {
+    dispatch({
+      type: cartActionTypes.ADD_TO_CART,
+      payload: item,
+    });
+  };
   return (
     <>
       <div className="container-fluid pt-5 pb-5">
@@ -71,7 +83,7 @@ export default function Trendy() {
           <div key={key} className="col-lg-3 col-md-6 col-sm-12 pb-1">
             <div className="card product-item border-0 mb-4">
               <div className="card-header inner product-img position-relative overflow-hidden bg-transparent border p-0">
-                <img className="img-fluid w-100" src={item.imgSrc} alt="img" />
+                <img className="img-fluid w-100" src={item.image} alt="img" />
               </div>
               <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
                 <h6 className="text-truncate mb-3">{item.title}</h6>
@@ -83,13 +95,19 @@ export default function Trendy() {
                 </div>
               </div>
               <div className="card-footer d-flex justify-content-between bg-light border">
-                <a href="/" className="btn btn-sm text-dark p-0">
+              <Link
+                  to={`/shop/${item.id}`}
+                  className="btn btn-sm text-dark p-0"
+                >
                   <i className="fas fa-eye trendy-icons mr-1"></i>View Detail
-                </a>
-                <a href="/" className="btn btn-sm text-dark p-0">
-                  <i className="fas fa-shopping-cart trendy-icons mr-1"></i>Add
-                  To Cart
-                </a>
+                </Link>
+                <button
+                  className="btn btn-sm text-dark p-0"
+                  onClick={() => addToCartHandler(item)}
+                >
+                  <i className="fas fa-shopping-cart trendy-icons mr-1"></i>
+                  Add To Cart
+                </button>
               </div>
             </div>
           </div>
@@ -138,7 +156,7 @@ export default function Trendy() {
           <div key={key} className="col-lg-3 col-md-6 col-sm-12 pb-1">
             <div className="card product-item border-0 mb-4">
               <div className="card-header inner product-img position-relative overflow-hidden bg-transparent border p-0">
-                <img className="img-fluid w-100" src={item.imgSrc} alt="img" />
+                <img className="img-fluid w-100" src={item.image} alt="img" />
               </div>
               <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
                 <h6 className="text-truncate mb-3">{item.title}</h6>
@@ -150,13 +168,19 @@ export default function Trendy() {
                 </div>
               </div>
               <div className="card-footer d-flex justify-content-between bg-light border">
-                <a href="/" className="btn btn-sm text-dark p-0">
+                <Link
+                  to={`/shop/${item.id}`}
+                  className="btn btn-sm text-dark p-0"
+                >
                   <i className="fas fa-eye trendy-icons mr-1"></i>View Detail
-                </a>
-                <a href="/" className="btn btn-sm text-dark p-0">
-                  <i className="fas fa-shopping-cart trendy-icons mr-1"></i>Add
-                  To Cart
-                </a>
+                </Link>
+                <button
+                  className="btn btn-sm text-dark p-0"
+                  onClick={() => addToCartHandler(item)}
+                >
+                  <i className="fas fa-shopping-cart trendy-icons mr-1"></i>
+                  Add To Cart
+                </button>
               </div>
             </div>
           </div>
