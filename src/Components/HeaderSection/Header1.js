@@ -136,6 +136,7 @@ const Header1 = () => {
                 </div>
               ) : (
                 <div className="navbar-nav ml-auto py-0">
+                  <p className="navbar-nav ml-auto py-0 pr-3 welcome-user"><b>Welcome</b></p>
                   <span
                     className="navbar-nav ml-auto py-0 logout-button"
                     onClick={logoutHandler}
