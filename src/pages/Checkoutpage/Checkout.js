@@ -7,9 +7,11 @@ export default function Checkout() {
   const items = useSelector(state => state.cart);
   
   let totalCart = 0;
+
   items.cartList.forEach(function (item) {
-    totalCart += Math.round(item.quantity * item.price);
+    totalCart += (item.quantity * item.price);
   });
+  const shippingCharges = totalCart >= 1 ? 1: 0;
 
   return (
     <div style={{backgroundColor:"#eaeded"}}>
@@ -240,13 +242,13 @@ export default function Checkout() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <h6 className="font-weight-medium">Shipping</h6>
-                  <h6 className="font-weight-medium">Free</h6>
+                  <h6 className="font-weight-medium">${shippingCharges}</h6>
                 </div>
               </div>
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="font-weight-bold">Total</h5>
-                  <h5 className="font-weight-bold">${totalCart}</h5>
+                  <h5 className="font-weight-bold">${totalCart+shippingCharges}</h5>
                 </div>
               </div>
             </div>
