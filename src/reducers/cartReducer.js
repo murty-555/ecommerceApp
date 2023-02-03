@@ -31,7 +31,7 @@ const cartReducer = (state=initialState,action) => {
                 if(!check){
                     let _cart = {
                         id: action.payload.id,
-                        quantity: 1,
+                        quantity: action.payload.quantity,
                         title: action.payload.title,
                         image: action.payload.image,
                         price: action.payload.price
@@ -41,7 +41,7 @@ const cartReducer = (state=initialState,action) => {
             }
             return {
                 ...state,
-                cart_count: state.cart_count + 1
+                cart_count: state.cart_count + action.payload.quantity
             }
         case cartActionTypes.INCREASE_CART_QTY:
             state.cart_count ++

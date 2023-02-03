@@ -31,6 +31,12 @@ function Login({ nameOfClass }) {
       setUserNotValid(false)
       setPasswordNotValid(true)
     }
+    else if(password !== "83r5^_" && userName !== "mor_2314"){
+      setFlag(false);
+      setDetailsNotValid(true);
+      setUserNotValid(false)
+      setPasswordNotValid(false)
+    }
     else {
       setFlag(false);
       setDetailsNotValid(false);

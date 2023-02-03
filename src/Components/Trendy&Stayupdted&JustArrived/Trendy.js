@@ -68,7 +68,7 @@ export default function Trendy() {
   const addToCartHandler = (item) => {
     dispatch({
       type: cartActionTypes.ADD_TO_CART,
-      payload: item,
+      payload: {...item,quantity:1},
     });
   };
   return (
