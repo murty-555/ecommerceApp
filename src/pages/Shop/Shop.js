@@ -55,7 +55,7 @@ const data = filteredResults.length > 0 ? filteredResults : productsList;
   const addToCartHandler = (item) => {
     dispatch({
       type: cartActionTypes.ADD_TO_CART,
-      payload: item,
+      payload: {...item,quantity:1}
     });
   };
 

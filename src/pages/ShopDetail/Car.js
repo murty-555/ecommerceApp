@@ -72,7 +72,7 @@ const Car = () => {
                 <button className="btn card-features  text-dark p-0" onClick={() => {
                   dispatch({
                     type: cartActionTypes.ADD_TO_CART,
-                    payload: item
+                    payload: {...item,quantity:1}
                   })
                 }}>
                   <i className="fas fa-shopping-cart iconColor mr-1"></i>Add To

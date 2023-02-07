@@ -6,56 +6,56 @@ import "./Trendy.css";
 
 const data = [
   {
-    id: 1,
+    id: 21,
     image: "https://technext.github.io/eshopper/img/product-1.jpg",
     title: "Women's Dress",
     price: 94.5,
     cross_price: 123,
   },
   {
-    id: 2,
+    id: 22,
     image: "https://technext.github.io/eshopper/img/product-2.jpg",
     title: "Kids Shirt",
     price: 22.3,
     cross_price: 30,
   },
   {
-    id: 3,
+    id: 23,
     image: "https://technext.github.io/eshopper/img/product-3.jpg",
     title: "Men's Stylish Shirt",
     price: 55.99,
     cross_price: 65,
   },
   {
-    id: 4,
+    id: 24,
     image: "https://technext.github.io/eshopper/img/product-4.jpg",
     title: "Women's Stylish Shirt",
     price: 48.26,
     cross_price: 55,
   },
   {
-    id: 5,
+    id: 25,
     image: "https://technext.github.io/eshopper/img/product-5.jpg",
     title: "Kids Stylish Shirt",
     price: 42.6,
     cross_price: 45,
   },
   {
-    id: 6,
+    id:26,
     image: "https://technext.github.io/eshopper/img/product-6.jpg",
     title: "Men's Suit",
     price: 40.24,
     cross_price: 44,
   },
   {
-    id: 7,
+    id: 27,
     image: "https://technext.github.io/eshopper/img/product-7.jpg",
     title: "Women's Dress",
     price: 26.66,
     cross_price: 32,
   },
   {
-    id: 8,
+    id: 28,
     image: "https://technext.github.io/eshopper/img/product-8.jpg",
     title: "Kid's Dress",
     price: 15.99,
@@ -169,7 +169,7 @@ export default function Trendy() {
               </div>
               <div className="card-footer d-flex justify-content-between bg-light border">
                 <Link
-                  to={`/shop/${item.id}`}
+                  to={`/shop`}
                   className="btn btn-sm text-dark p-0"
                 >
                   <i className="fas fa-eye trendy-icons mr-1"></i>View Detail
