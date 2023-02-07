@@ -96,7 +96,7 @@ export default function Trendy() {
               </div>
               <div className="card-footer d-flex justify-content-between bg-light border">
               <Link
-                  to={`/shop/${item.id}`}
+                  to={`/shop`}
                   className="btn btn-sm text-dark p-0"
                 >
                   <i className="fas fa-eye trendy-icons mr-1"></i>View Detail
