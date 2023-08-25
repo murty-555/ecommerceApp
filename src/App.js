@@ -8,7 +8,7 @@ import Shop from './pages/Shop/Shop';
 import ShoppingCart from './pages/shopping-cart-page/ShoppingCart';
 import Checkout from './pages/Checkoutpage/Checkout';
 import Contactus from './pages/contact-page/Contactus';
-import ShopDetail from "./pages/ShopDetail/ShopDetail";
+import ShopDetail from "./pages/ShopDetail/ShopDetail"
 
 function App() {
   return (
