@@ -25,7 +25,7 @@ const offers = () => {
     <div className="container-fluid ">
       <div className="row px-xl-5">
         {dummy.map((value, index) => (
-          <div className="col-md-6 ">
+          <div className="col-md-6 " key={index}>
             <div
               className={`small-container d-flex flex-row justify-content-between ${value.class}`}
               style={{ alignItems: "center" }}
