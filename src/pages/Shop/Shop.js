@@ -15,6 +15,8 @@ const Shop = () => {
     ...state.products,
   }));
   const [perpage, setPerpage] = useState([]);
+   const [filteredResults, setFilteredResults] = useState([]);
+   
   useEffect(() => {
     dispatch(fetchProducts());
     // pageHandler(1);
@@ -23,18 +25,37 @@ const Shop = () => {
 
   const pageHandler = (pageNumber) => {
     // console.log(pageNumber);
-    setPerpage(productsList.slice(pageNumber * 9 - 9, pageNumber * 9));
+    if (filteredResults.length > 0) {
+      setPerpage(filteredResults.slice(pageNumber * 9 - 9, pageNumber * 9));
+    } else {
+      setPerpage(productsList.slice(pageNumber * 9 - 9, pageNumber * 9));
+    }
   };
   useEffect(() => {
-    if (productsList.length > 0) {
+    if (filteredResults.length > 0) {
+      setPerpage(filteredResults.slice(0, 9));
+    }else{
       setPerpage(productsList.slice(0, 9));
     }
-  }, [productsList]);
+  }, [filteredResults,productsList]);
+
+  const searchItems = (e) => {
+    const results = productsList.filter((post) => {
+      if (e.target.value === "") return productsList;
+      return post.title.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+   
+   setFilteredResults(results);
+  
+        
+    
+}
+const data = filteredResults.length > 0 ? filteredResults : productsList;
 
   const addToCartHandler = (item) => {
     dispatch({
       type: cartActionTypes.ADD_TO_CART,
-      payload: item,
+      payload: {...item,quantity:1}
     });
   };
 
@@ -53,9 +74,10 @@ const Shop = () => {
                   <form action="">
                     <div className="input-group">
                       <input
-                        type="text"
+                        type="search"
                         className="form-control"
                         placeholder="Search by name"
+                         onChange={searchItems}
                       />
                       <div className="input-group-append">
                         <span className="input-group-text bg-transparent text-primary">
@@ -64,7 +86,7 @@ const Shop = () => {
                       </div>
                     </div>
                   </form>
-                  <div className="dropdown ml-4">
+                  {/* <div className="dropdown ml-4">
                     <button
                       className="btn border dropdown-toggle"
                       type="button"
@@ -89,7 +111,7 @@ const Shop = () => {
                         Best Rating
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="container-fluid ">
@@ -142,7 +164,7 @@ const Shop = () => {
                   )}
                 </div>
               </div>
-              <Pagination data={productsList} pageHandler={pageHandler} />
+              <Pagination data={data} pageHandler={pageHandler} />
             </div>
           </div>
         </div>
